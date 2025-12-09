@@ -1,0 +1,1269 @@
+﻿ALARA RESURGENT — DESIGN BIBLE
+Status: Final Development File (274 Cards + Basics)
+Date: 2025
+1. FLAVOR & WORLD
+The Setting: It has been 30 years since the Conflux. The five shards have physically merged, but the psychological scars remain. The central conflict is no longer "Shard vs. Shard," but a civil war within each culture about how to adapt to a world with all five colors of mana.
+The Central Conflict: Synthesis vs. Purity
+* The Synthesists: Factions that embrace the new colors of mana flooding their lands.
+* The Purists: Zealots who view the new mana as pollution and violently enforce old borders.
+2. MECHANICAL IDENTITIES
+* Fabricate N (Esper - WUB): When this creature enters the battlefield, put N +1/+1 counters on it or create N 1/1 colorless Servo artifact creature tokens. (Restricted to Creatures/Vehicles).
+* Covenant (Bant - GWU): Abilities that are active or enhanced as long as you control a modified creature (a creature with a counter, Equipment, or Aura on it).
+* Exhume [Cost] (Grixis - UBR): You may cast this spell from your graveyard by paying [Cost] and exiling a creature card from your graveyard.
+* Carnage (Jund - BRG): Triggers whenever a permanent you control is put into a graveyard from the battlefield.
+* Titanic (Naya - RGW): Abilities that are active or enhanced if you control a creature with power 4 or greater.
+* Spectrum (5-Color): Triggers whenever you cast a multicolored spell.
+3. CARD FILE (274 Cards)
+MYTHIC RARES (15)
+[M01] Varrus, the Steel-Sower {W}{U}{B}
+Legendary Artifact Creature — Human Artificer (2/3)
+Ward — Sacrifice an artifact.
+Other artifact creatures you control get +1/+1.
+Whenever another nontoken artifact enters the battlefield under your control, Fabricate 1.
+“The metal must breathe if it is to survive.”
+[M02] Xanatos, Grand Unifier {2}{W}{U}{B}
+Legendary Artifact Creature — Sphinx (4/4)
+Flying, Vigilance
+Token creatures you control get +1/+1.
+Creatures you control with +1/+1 counters on them have lifelink.
+At the beginning of your end step, Fabricate 1.
+“Perfection is not a destination. It is a continuous process of assembly.”
+[M03] Convergence of Five Suns {5}{W}{U}{B}{R}{G}
+Sorcery
+Art Concept: A powerful, mystical event where exactly five distinct suns, each glowing with one of the colors of Magic (white, blue, black, red, green), converge in the sky, their light blending into a single, blinding point.
+Affinity for multicolored permanents
+Choose one for each distinct color among permanents you control —
+* White: Create two 4/4 White Angel creature tokens with Flying.
+* Blue: Draw three cards.
+* Black: Destroy all creatures your opponents control.
+* Red: Deal 10 damage to target player.
+* Green: Return all cards from your graveyard to your hand.
+[M04] Vorakesh, Apex of the Old Ways {2}{B}{R}{G}
+Legendary Creature — Dragon (6/6)
+Flying, Trample, Haste
+Whenever Vorakesh enters the battlefield or attacks, you may sacrifice another creature. If you do, Vorakesh deals damage equal to the sacrificed creature's power to any target.
+“Civilization is a crutch for the weak. Break the walls. Eat the builders.”
+[M05] Jezal, the Crimson Sword {1}{G}{W}{U}
+Legendary Creature — Angel Soldier (3/4)
+Flying, First Strike
+Covenant — Whenever Jezal attacks, if you control a modified creature, you may pay {R}{R}. If you do, put a +1/+1 counter on each creature you control and untap them. After this combat phase, there is an additional combat phase.
+“Order without fire is stagnation. We must burn to be reborn.”
+[M06] Ajani, Soul of the Maelstrom {2}{R}{G}{W}
+Legendary Planeswalker — Ajani (4)
++1: Reveal the top three cards of your library. Put all creature and land cards revealed this way into your hand and the rest into your graveyard.
+-2: Distribute three +1/+1 counters among one, two, or three target creatures. They gain trample until end of turn.
+-8: You get an emblem with "Whenever you cast a spell, you gain life equal to its mana value and create a Cat Warrior creature token with power and toughness equal to its mana value."
+[M07] Tezzeret, the Flesh-Sculptor {3}{U}{B}
+Legendary Planeswalker — Tezzeret (3)
++1: Create a 1/1 colorless Servo artifact creature token. You may put a +1/+1 counter on an artifact you control.
+-3: Sacrifice an artifact. If you do, draw cards equal to its power.
+-8: You get an emblem with "Artifact creatures you control get +3/+3 and have Flying and Menace."
+[M08] Sedris, King of the Sanctified {3}{U}{B}{R}
+Legendary Creature — Zombie Warrior (5/5)
+Exhume {1}{B}{B}
+Other creatures you control have "Exhume {2}."
+He rose not to conquer the living, but to defend the dead from the demons.
+[M09] Mayael, Voice of Steel {R}{G}{W}
+Legendary Creature — Elf Druid (2/3)
+Titanic — {X}{R}{G}{W}, {T}: Look at the top X cards of your library. You may put a creature card with power X or greater from among them onto the battlefield. Put the rest on the bottom of your library in a random order.
+The Anima's song has changed. It now hums with the frequency of a buzzsaw.
+[M10] Scars of the Dragon God {2}{B}{B}{R}
+Enchantment
+At the beginning of your upkeep, each player sacrifices a nonland permanent.
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, put a lore counter on Scars of the Dragon God.
+Remove 10 lore counters from Scars of the Dragon God: You win the game.
+Bolas is gone, but the wound in the world remembers his hunger.
+[M11] Avatar of the Maelstrom {W}{U}{B}{R}{G}
+Legendary Creature — Avatar (10/10)
+This spell costs {1} less to cast for each color among permanents you control.
+Vigilance, Trample, Lifelink, Haste, Protection from Monocolored.
+The storm has opened its eyes.
+[M12] Rafiq's Memorial {3}
+Legendary Artifact
+Creatures you control have Exalted.
+Covenant — Whenever a creature you control attacks alone, if it's modified, it gains double strike and lifelink until end of turn.
+“His sigils have faded, but his legend strikes as true as ever.”
+[M13] Sharuum, the Biosynth {3}{W}{U}{B}
+Legendary Artifact Creature — Sphinx (5/5)
+Flying
+When Sharuum enters the battlefield or attacks, you may sacrifice a nonartifact creature. If you do, return target artifact card from your graveyard to the battlefield.
+Artifact creatures you control have "Ward {2}."
+[M14] Thraximundar, the Rot-Bound {4}{U}{B}{R}
+Legendary Creature — Zombie Assassin (6/6)
+Haste
+Whenever Thraximundar attacks, defending player sacrifices a creature.
+Carnage — Whenever a player sacrifices a creature, put a +1/+1 counter on Thraximundar.
+[M15] Maelstrom Nexus {W}{U}{B}{R}{G}
+Legendary Enchantment
+The first spell you cast each turn has Cascade.
+Where the five lines meet, possibility becomes inevitability.
+RARES (53)
+[R01] Solar Reckoning {4}{W}{W}
+Sorcery
+Destroy all creatures.
+Covenant — If you control a modified creature, you may choose one modified creature you control. It gains indestructible until end of turn.
+“The light burns the unworthy. The sigil protects the righteous.”
+[R02] Glint-Steel Archon {4}{W}{W}
+Artifact Creature — Archon (4/4)
+Flying, Vigilance
+Fabricate 2
+The feathers are razor-sharp etherium; the mount is pure soul.
+[R03] Doppelganger of the Depths {2}{U}{U}
+Creature — Shapeshifter (0/0)
+Exhume {3}{U}{U}
+You may have Doppelganger of the Depths enter the battlefield as a copy of any creature on the battlefield.
+It wears faces like others wear clothes—discarding them when they go out of style.
+[R04] Master of the Foundries {4}{U}
+Artifact Creature — Vedalken Artificer (2/4)
+Artifact spells you control cost {1} less to cast.
+{T}: Target artifact becomes unblockable until end of turn.
+Fabricate 2
+[R05] Grixis Lich-Lord {3}{B}{B}
+Creature — Zombie Wizard (3/3)
+Whenever you cast a spell from your graveyard, copy it. You may choose new targets for the copy.
+“Death is not an end. It is merely an echo chamber.”
+[R06] Pyre-Scale Hellkite {4}{R}{R}
+Creature — Dragon (5/5)
+Flying, Haste
+When Pyre-Scale Hellkite dies, it deals damage equal to its power to any target.
+Carnage — {R}: Return Pyre-Scale Hellkite from your graveyard to your hand. Activate only if a permanent was put into a graveyard from the battlefield this turn.
+It rises from the ash of its own destruction, hungry for more.
+[R07] Apex Hydra {3}{R}{R}
+Creature — Hydra (4/4)
+Trample
+Titanic — Whenever Apex Hydra attacks, if you control another creature with power 4 or greater, put a +1/+1 counter on Apex Hydra. Then create a 4/4 red Hydra creature token tapped and attacking. Exile that token at end of combat.
+A king never hunts alone.
+[R08] Conflux Titan {4}{G}{G}
+Creature — Giant (6/6)
+Trample
+Spectrum — Whenever you cast a multicolored spell, search your library for a basic land card and put it onto the battlefield tapped.
+It walks the leylines like a tightrope.
+[R09] Ancient of the Maelstrom {5}{G}{G}
+Creature — Elemental (7/7)
+This spell can't be countered.
+Spectrum — Whenever you cast a multicolored spell, destroy target artifact or enchantment.
+It remembers when the world was whole, and it hates what has been built upon it.
+[R10] Decree of Assimilation {W}{U}
+Instant
+Replicate {W}{U}
+Choose one —
+* Create two 1/1 colorless Servo artifact creature tokens.
+* Put two +1/+1 counters on up to one creature you control.
+“The law does not distinguish between the flesh and the metal. Both must comply.”
+[R11] Mind-Link Exosuit {U}{B}
+Artifact Creature — Equipment Construct (1/1)
+Menace
+Fabricate 1
+Whenever equipped creature deals combat damage to a player, draw a card.
+Reconfigure {2}
+Equipped creature gets +1/+1 and has menace.
+Thoughts become actions. Actions become victories.
+[R12] Chrome-Clad Eidolon {1}{W}{U}
+Enchantment Creature — Spirit Artificer (1/1)
+Flying
+Bestow {3}{W}{U}
+Fabricate 2
+Enchanted creature gets +2/+2 and has flying.
+The ghost in the machine has found a new shell.
+[R13] Sigil-Breaker Valeros {R}{G}{W}{U}
+Legendary Creature — Angel Soldier (3/3)
+Flying, Haste
+Spectrum — Whenever you cast a multicolored spell, untap Valeros. He gets +2/+2 until end of turn.
+Whenever Valeros attacks, look at the top X cards of your library, where X is his power. You may reveal a multicolored card from among them and put it into your hand.
+“The borders are gone. The battlefield is everywhere.”
+[R14] Necrotic Sanctifier {2}{U}{B}{R}
+Creature — Zombie Cleric (3/2)
+When Necrotic Sanctifier enters the battlefield, return target instant or sorcery card from your graveyard to your hand.
+Spectrum — Whenever you cast a multicolored spell, you may exile target card from a graveyard. If you do, create a 2/2 Black Zombie creature token.
+He found that the Light did not burn the dead; it merely gave them purpose.
+[R15] Apex of the Feast {2}{B}{R}{G}
+Creature — Dragon (5/4)
+Flying
+Carnage — At the beginning of each end step, if a permanent you control was put into a graveyard from the battlefield this turn, create a 3/3 Red Dragon creature token with Flying.
+The jungle does not mourn the fallen. It eats them.
+[R16] Soul of the Wilds {G}{G}{W}{R}
+Creature — Avatar (6/6)
+Trample
+Titanic — As long as you control another creature with power 4 or greater, Soul of the Wilds has Hexproof and Indestructible.
+It is the forest's answer to the steel.
+[R17] Knight-Captain of Valeron {1}{G}{W}{U}
+Creature — Rhox Knight (3/3)
+Covenant — As long as you control a modified creature, other creatures you control get +1/+1 and have Vigilance.
+When Knight-Captain of Valeron enters the battlefield, distribute two +1/+1 counters among one or two target creatures.
+“We fight as one, or we die as many.”
+[R18] Avatar of the Conflux {W}{U}{B}{R}{G}
+Creature — Elemental Avatar (8/8)
+Trample, Ward {3}
+Spectrum — Whenever you cast a multicolored spell, put a +1/+1 counter on Avatar of the Conflux.
+The living embodiment of a world reunited.
+[R19] Aven Ascendant {G}{W}{U}
+Creature — Bird Soldier (3/3)
+Flying
+Covenant — At the beginning of combat on your turn, if you control a modified creature, put a +1/+1 counter on target creature you control.
+“Chaos is a disease. Discipline is the cure.”
+[R20] Ascendant of Progress {W}{U}{B}
+Artifact Creature — Sphinx (3/3)
+Flying
+Whenever Ascendant of Progress deals combat damage to a player, create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on Ascendant of Progress.
+“Tomorrow is built on the foundations of today.”
+[R21] Ascendant of Ruin {U}{B}{R}
+Creature — Demon (3/3)
+Flying
+Whenever you cast a spell from your graveyard, draw a card and lose 1 life.
+“Your past failures are my future gains.”
+[R22] Ascendant of the Feast {B}{R}{G}
+Creature — Viashino Shaman (4/3)
+Trample
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, add {R} or {G}. Until end of turn, you don't lose this mana as steps and phases end.
+“Feast until the world is bone.”
+[R23] Ascendant of Might {R}{G}{W}
+Creature — Beast Shaman (3/3)
+Titanic — Creatures you control with power 4 or greater have "Ward {2}."
+At the beginning of combat on your turn, target creature gets +X/+X until end of turn, where X is the number of creatures you control with power 4 or greater.
+“The earth trembles at our approach.”
+[R24] Prism-Lens Construct {3}
+Artifact Creature — Golem (2/2)
+Spectrum — Whenever you cast a multicolored spell, put a +1/+1 counter on Prism-Lens Construct.
+Remove two +1/+1 counters from Prism-Lens Construct: Add two mana of any one color.
+It sees not in color, but in potential.
+[R25] Prismatic Henge
+Land
+{T}: Add {C}.
+{T}: Add one mana of any color. Spend this mana only to cast a multicolored spell.
+Spectrum — Whenever you cast a multicolored spell, you gain 1 life.
+A gathering place where the five become one, and the one becomes many.
+[R26] Boon-Bringer Lammasu {3}{W}{W}
+Creature — Lammasu (4/4)
+Flying, Lifelink
+When Boon-Bringer Lammasu enters the battlefield, put a +1/+1 counter on target creature.
+Its arrival is the covenant fulfilled.
+[R27] Master of Transmutations {3}{U}{U}
+Creature — Human Wizard (2/2)
+{U}, {T}: Exchange control of target artifact you control and target artifact an opponent controls.
+“Why settle for steel when you can have silk that cuts?”
+[R28] Grave-Titan's Command {3}{B}{B}
+Sorcery
+Choose two —
+   * All players sacrifice two creatures.
+   * Return two creature cards from your graveyard to your hand.
+   * Create two 2/2 black Zombie creature tokens.
+   * You draw two cards and lose 2 life.
+The decree of the Rot-Lords is absolute.
+[R29] Hellion's Outburst {5}{R}
+Sorcery
+Sacrifice all creatures you control. For each creature sacrificed this way, create a 4/4 red Hellion creature token.
+Carnage — If a creature you controlled died this turn before you cast this spell, create two additional 4/4 red Hellion creature tokens.
+“Let the weak burn to fuel the strong.”
+[R30] Resurgent Wilds {2}{G}
+Enchantment
+You may play an additional land on each of your turns.
+Titanic — At the beginning of combat on your turn, if you control a creature with power 4 or greater, put a +1/+1 counter on target creature and it gains trample until end of turn.
+The land itself rises to meet the new age.
+[R31] Vitalist's Greenhouse {1}{W}{U}
+Artifact
+At the beginning of your end step, if you gained life this turn, create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on an artifact creature you control.
+{G}, {T}: Target artifact creature gains Hexproof until end of turn.
+To the Vitalists, metal is just a harder form of bark.
+[R32] Blind Court Decree {2}{W}{U}
+Enchantment
+As Blind Court Decree enters the battlefield, choose a color.
+Spells of the chosen color cost {2} more to cast.
+Creatures of the chosen color can't attack you or planeswalkers you control unless their controller pays {2} for each of those creatures.
+“Deviance will not be tolerated.”
+[R33] Absolver's Resurrection {4}{W}{B}
+Sorcery
+Return target creature card from your graveyard to the battlefield. Put a +1/+1 counter on it. It is a white Zombie in addition to its other colors and types.
+Exhume {6}{W}{W}
+“Rise, and serve a higher purpose.”
+[R34] Steel-Leaf Gargantuan {5}{G}{G}
+Artifact Creature — Beast
+Affinity for Artifacts
+Titanic — As long as you control another creature with power 4 or greater, Steel-Leaf Gargantuan has Trample and "Ward — Pay 3 life."
+The elves wrapped the forest in iron to survive the dragons.
+8/8
+[R35] Stone-Shaper Vanguard {1}{R}{G}
+Enchantment
+Creatures you control have Haste.
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, put a +1/+1 counter on target creature.
+“We build on the bones of the fallen.”
+[R36] Null-Keeper Colossus {7}
+Artifact Creature — Golem
+This spell costs {1} less to cast for each artifact you control.
+When Null-Keeper Colossus enters the battlefield, exile all colored permanents target opponent controls until Null-Keeper Colossus leaves the battlefield.
+It cleanses the world of the stain of mana.
+7/7
+[R37] Crusade of the Crimson Sigil {2}{R}{W}
+Enchantment
+Creatures you control get +1/+0 and have Haste.
+Covenant — At the beginning of your end step, if you control a modified creature, exile the top card of your library. You may play it until the end of your next turn.
+The march never stops. The fire never dies.
+[R38] Rot-Lord's Executioner {2}{B}{R}
+Creature — Zombie Warrior (4/3)
+Menace
+When Rot-Lord's Executioner enters the battlefield, you may sacrifice another creature. If you do, destroy target creature or planeswalker.
+He judges the living and finds them delicious.
+[R39] Blind Court Justiciar {2}{W}{U}
+Creature — Vedalken Knight (3/3)
+Flash
+When Blind Court Justiciar enters the battlefield, detain target creature an opponent controls.
+Spells your opponents cast cost {1} more to cast for each detained creature they control.
+“You are under arrest for crimes against symmetry.”
+[R40] Crimson Sigil Warlord {2}{R}{W}
+Creature — Aven Soldier (3/2)
+Haste
+Covenant — When Crimson Sigil Warlord attacks, if you control a modified creature, you may discard a card. If you do, draw two cards.
+“Forward! Let the Sigil light our path!”
+[R41] Vitalist Bioreactor {2}{G}{U}
+Artifact
+{T}: Add {G} or {U}.
+{4}, {T}: Create X 1/1 colorless Servo artifact creature tokens or put X +1/+1 counters on target artifact creature, where X is the amount of mana in your mana pool.
+It hums with the rhythm of a heartbeat.
+[R42] Null-Keeper Purge {X}{W}{B}
+Sorcery
+Destroy X target creatures with power 3 or less.
+Size is irrelevant. Purity is absolute.
+[R43] Absolver Haunt {3}{W}{W}
+Creature — Spirit (4/4)
+Flying, Vigilance
+When Absolver Haunt enters the battlefield, return target permanent card with mana value 2 or less from your graveyard to the battlefield.
+She reclaims the lost fragments of hope.
+[R44] Rot-Lord's Supremacy {1}{B}{B}{R}
+Enchantment
+Attacking creatures you control have Deathtouch and First Strike.
+Carnage — At the beginning of your end step, if a creature died this turn, create a 5/5 black Demon creature token with flying.
+The strong take what they want. The weak become what the strong want.
+[R45] Stone-Shaper Siege-Engine {4}
+Artifact Creature — Juggernaut (5/3)
+Juggernaut attacks each combat if able.
+Carnage — Whenever a creature dies, Stone-Shaper Siege-Engine gains Indestructible until end of turn.
+Fueled by destruction, built for war.
+[R46] Apex Territory {R}{G}
+Enchantment
+Whenever a creature with power 4 or greater enters the battlefield under your control, you may have it fight target creature an opponent controls.
+There is only enough room for one at the top.
+[R47] Steel-Leaf Ambush {3}{G}{G}
+Instant
+Create two 3/3 green Elephant creature tokens.
+Titanic — If you control a creature with power 4 or greater, creatures you control gain Hexproof until end of turn.
+The jungle strikes with sudden, crushing force.
+[R48] Anima's Thunder-Hoof {4}{R}{G}{W}
+Creature — Beast Avatar (5/5)
+Trample, Haste
+Titanic — When Anima's Thunder-Hoof enters the battlefield, if you control another creature with power 4 or greater, destroy all artifacts and enchantments your opponents control.
+It tramples the works of artifice into dust.
+[R49] Maelstrom Genesis {U}{R}{G}
+Sorcery
+Reveal the top 5 cards of your library. You may put a creature card from among them onto the battlefield. It gains Haste. Return it to your hand at the beginning of the next end step.
+From the chaos, a moment of perfect form.
+[R50] Alara's Grimoire {2}
+Artifact
+{T}: Draw a card, then discard a card.
+{2}, {T}, Sacrifice Alara's Grimoire: Draw two cards.
+The pages are written in wind, fire, and blood.
+[R51] Conflux Archmage {3}{U}
+Creature — Vedalken Wizard (2/2)
+Spectrum — Whenever you cast a multicolored spell, copy it. You may choose new targets for the copy.
+“One color is a note. Five colors are a symphony.”
+[R52] Maelstrom Pulse {1}{B}{G}
+Sorcery
+Destroy target nonland permanent and all other permanents with the same name as that permanent.
+Sometimes, the world needs to be reset.
+[R53] Fauna Shaman {1}{G}
+Creature — Elf Shaman (2/2)
+{G}, {T}, Discard a creature card: Search your library for a creature card, reveal it, put it into your hand, then shuffle.
+She sings the song of every beast that ever walked the jungle.
+UNCOMMONS (80)
+[U01] Behemoth's Maul {3}
+Artifact — Equipment
+Equipped creature gets +3/+0 and has Trample and Lifelink.
+Equip {3}
+A weapon fit for a titan.
+[U02] Etherium Nullifier {1}{U}{U}
+Artifact Creature — Drone (2/1)
+Flash
+When Etherium Nullifier enters the battlefield, counter target spell unless its controller pays {1}.
+Fabricate 1
+“Access denied. Purity protocol engaged.”
+[U03] Reanimate the Fallen {3}{B}
+Sorcery
+Return target creature card from your graveyard to the battlefield.
+Exhume {5}{B}{B}
+Death is just a temporary setback.
+[U04] Rot-Hollow Scourge {3}{B}
+Creature — Horror (3/3)
+Menace
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, Rot-Hollow Scourge gets +1/+1 until end of turn.
+It feeds on the echoes of the dying.
+[U05] Volcanic Fallout {1}{R}{R}
+Instant
+This spell can't be countered.
+Volcanic Fallout deals 2 damage to each creature and each player.
+The sky rained fire, and the weak were consumed.
+[U06] Rage-Feast Hellion {4}{R}
+Creature — Hellion (4/4)
+Haste
+Carnage — At the beginning of your end step, if a permanent you control was put into a graveyard from the battlefield this turn, put a +1/+1 counter on Rage-Feast Hellion.
+It gorges itself on destruction.
+[U07] Behemoth's Roar {1}{R}{G}
+Instant
+Target creature gets +4/+4 until end of turn.
+Titanic — If you control a creature with power 4 or greater, that creature also gains Trample and must be blocked if able.
+A sound that shakes the very foundations of the earth.
+[U08] Life-Force Baloth {2}{G}{G}
+Creature — Beast (4/4)
+Trample
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, you gain 2 life.
+Life blooms where death falls.
+[U09] Rhox Arbiter {G}{W}{U}
+Creature — Rhox Soldier (3/3)
+Covenant — As long as you control a modified creature, Rhox Arbiter has flying and vigilance.
+When Rhox Arbiter enters the battlefield, you may search your library for an Equipment or Aura card with mana value 2 or less and put it into your hand, then shuffle.
+“My shield is clarity. My sword is duty.”
+[U10] Etherium Soul-Siphoner {W}{U}{B}
+Artifact Creature — Zombie Wizard (2/2)
+Flying
+When Etherium Soul-Siphoner enters the battlefield, Fabricate 2.
+{1}{B}, Sacrifice an artifact: Draw a card.
+To the living, it is a monstrosity. To the necromancers of Grixis, it is an endless supply of parts.
+[U11] Viscera Dragger {U}{B}{R}
+Creature — Ogre Berserker (5/1)
+Haste
+At the beginning of the end step, sacrifice Viscera Dragger.
+Exhume {1}{B}{R}
+He dies every sunset, only to crawl back out for breakfast.
+[U12] Thunder-Thrasher Baloth {B}{R}{G}
+Creature — Beast (4/4)
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, put a +1/+1 counter on Thunder-Thrasher Baloth.
+{R}{G}, Sacrifice a land: Thunder-Thrasher Baloth gains trample until end of turn.
+The jungle does not mourn the fallen. It eats them.
+[U13] Gargantua’s Herald {R}{G}{W}
+Creature — Elf Shaman (2/3)
+Titanic — When Gargantua’s Herald enters the battlefield, if you control a creature with power 4 or greater, draw a card.
+{T}: Add {G}{W}.
+“The earth shakes. They are coming.”
+[U14] Mobile Siege-Bastion {2}{W}{U}
+Artifact — Vehicle (3/4)
+Fabricate 2
+Crew 2
+The citadel doesn’t just house the army; it grows them.
+[U15] Etherium Architect {1}{U}{B}
+Creature — Vedalken Artificer (2/2)
+Fabricate 1
+Optimization — When Etherium Architect enters the battlefield, if you put a +1/+1 counter on it, it gains Flying and Ward {2}. If you created a token, draw a card, then discard a card.
+“Design is an iterative process.”
+[U16] Flux-Core Transmuter {W}{U}{B}
+Artifact Creature — Construct (2/3)
+Fabricate 2
+{1}, {T}, Remove a +1/+1 counter from a creature you control: Create a 1/1 colorless Servo artifact creature token.
+{1}, {T}, Sacrifice an artifact: Put a +1/+1 counter on target creature.
+Matter is fluid. Form is a suggestion.
+[U17] Pridemage Duelist {G}{W}
+Creature — Cat Knight (2/2)
+Flash
+Covenant — As long as you control a modified creature, Pridemage Duelist has Double Strike.
+“Two strikes for the price of one mistake.”
+[U18] Rot-Farm Cultivator {1}{B}{G}
+Creature — Plant Zombie (1/3)
+{T}, Sacrifice a creature: Add two mana of any one color.
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, untap Rot-Farm Cultivator.
+The harvest is always plentiful in the Dregscape.
+[U19] Sigiled Charm {G}{W}{U}
+Instant
+Choose one —
+      * Put a +1/+1 counter on target creature. It gains indestructible until end of turn.
+      * Target creature gains Hexproof and can't be blocked until end of turn.
+      * Destroy target artifact or enchantment.
+The three eyes of Bant see all paths to victory.
+[U20] Etherium Charm {W}{U}{B}
+Instant
+Choose one —
+         * Create a 1/1 blue Thopter artifact creature token with flying.
+         * Target creature gets -3/-3 until end of turn.
+         * Counter target spell with mana value 3 or less.
+Precision is the hallmark of Esper.
+[U21] Necrotic Charm {U}{B}{R}
+Instant
+Choose one —
+            * Draw 2 cards, then discard a card.
+            * Return target creature to its owner's hand.
+            * Target opponent sacrifices a creature.
+Death comes in many forms, all of them unpleasant.
+[U22] Devouring Charm {B}{R}{G}
+Instant
+Choose one —
+               * Sacrifice a creature: Draw 2 cards.
+               * Deal 3 damage to target creature.
+               * Destroy target artifact.
+The hunger of Jund knows no bounds.
+[U23] Behemoth Charm {R}{G}{W}
+Instant
+Choose one —
+                  * Target creature gets +3/+3 and gains trample until end of turn.
+                  * Behemoth Charm deals 3 damage to any target and you gain 3 life.
+                  * Destroy target artifact or enchantment.
+The power of Naya is the power of life itself.
+[U24] Filigree Familiar {3}
+Artifact Creature — Fox (2/2)
+When Filigree Familiar enters the battlefield, you gain 2 life.
+When Filigree Familiar dies, draw a card.
+A loyal friend, constructed to last.
+[U25] Corpse Connoisseur {4}{B}
+Creature — Zombie Wizard (3/3)
+When Corpse Connoisseur enters the battlefield, search your library for a creature card and put it into your graveyard, then shuffle.
+Exhume {2}{U}{B}
+“I prefer my assistants... seasoned.”
+[U26] Fusion Elemental {W}{U}{B}{R}{G}
+Creature — Elemental (8/8)
+The chaos of the Maelstrom, given form and hunger.
+[U27] Sphinx's Steward {W}{B}
+Artifact Creature — Vedalken Wizard (2/2)
+Flying
+When Sphinx's Steward enters the battlefield, Fabricate 1.
+{1}{W}{B}, Sacrifice an artifact: You gain 3 life and target opponent loses 3 life.
+He ensures the master's will is done.
+[U28] Storm-Kin Sorcerer {U}{R}
+Creature — Human Wizard (2/1)
+Prowess
+Exhume {U}{R}
+She channels the Maelstrom through her own body.
+[U29] Rot-Garden Shambler {B}{G}
+Creature — Plant Zombie (3/3)
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, put a +1/+1 counter on Rot-Garden Shambler.
+It grows fat on decay.
+[U30] Cerodon Charger {R}{W}
+Creature — Beast (3/2)
+Haste
+Titanic — Cerodon Charger has Double Strike as long as you control a creature with power 4 or greater.
+A battering ram made of muscle and bone.
+[U31] Sigiled Sky-Knight {G}{U}
+Creature — Human Knight (2/2)
+Flying
+Covenant — As long as you control a modified creature, Sigiled Sky-Knight gets +1/+1 and has Hexproof.
+He rides the winds of change.
+[U32] Purge the Unnatural {1}{W}
+Instant
+Destroy target multicolored permanent.
+“One soul, one color. Anything else is an abomination.”
+[U33] Logic Snare {2}{U}
+Instant
+Counter target spell. If that spell was multicolored, Scry 2.
+“Your thoughts are messy. Allow me to organize them.”
+[U34] Blood-Tithe Executioner {3}{B}
+Creature — Vampire Warrior (3/2)
+When Blood-Tithe Executioner enters the battlefield, target opponent sacrifices a creature.
+Exhume {4}{B}
+The debt must be paid.
+[U35] Maelstrom Geode {3}
+Artifact
+{T}: Add one mana of any color.
+When Maelstrom Geode is put into a graveyard from the battlefield, draw a card.
+A crystalized fragment of pure possibility.
+[U36] Conflux Prism {3}
+Artifact
+{T}: Add one mana of any color.
+{2}, {T}: Draw a card. Activate only if you control permanents of all five colors.
+It reflects a world reunited.
+[U37] Crimson Paladin {2}{W}{U}
+Creature — Aven Knight (3/3)
+Flash
+Covenant — When Crimson Paladin enters the battlefield, if you control a modified creature, Crimson Paladin deals 3 damage to target attacking or blocking creature.
+He strikes with the suddenness of a lightning bolt.
+[U38] Blind Court Censor {2}{W}{U}
+Creature — Spirit Advisor (2/3)
+Flying
+Spells your opponents cast with 2 or more colors cost {2} more to cast.
+“The law is clear: One soul, one color. Division breeds chaos.”
+[U39] Vitalist Sower {2}{W}{U}
+Artifact Creature — Druid Construct (2/4)
+Fabricate 1
+Spectrum — Whenever you cast a multicolored spell, put a +1/+1 counter on target artifact creature you control.
+It plants seeds of metal in fields of flesh.
+[U40] Null-Keeper Automaton {4}
+Artifact Creature — Golem (3/3)
+When Null-Keeper Automaton enters the battlefield, choose a color. Null-Keeper Automaton has protection from that color.
+Spells of the chosen color cost {1} more to cast.
+It is a wall against which the tide of magic breaks.
+[U41] Absolver Chaplain {1}{U}{B}
+Creature — Zombie Cleric (2/2)
+Lifelink
+{W}, Sacrifice another creature: Return target creature card with mana value 2 or less from your graveyard to the battlefield.
+“Even in death, there is duty.”
+[U42] Rot-Lord Butcher {3}{B}{R}
+Creature — Demon Berserker (4/2)
+Trample
+When Rot-Lord Butcher enters the battlefield, destroy target creature with a +1/+1 counter on it or target green creature.
+“Growth is a lie. Rot is the truth.”
+[U43] Stone-Shaper Engineer {2}{R}{G}
+Creature — Goblin Artificer (2/3)
+{T}: Add {C}. Spend this mana only to cast artifact spells or activate abilities of artifacts.
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, create a Treasure token.
+He builds monuments from the rubble.
+[U44] Apex Hunter {1}{R}{G}
+Creature — Viashino Shaman (3/2)
+Reach
+{1}{B}, {T}: Apex Hunter fights target creature you don't control. If that creature is blue or white, Apex Hunter gets +2/+2 until end of turn.
+“Civilization makes you soft. The jungle makes you strong.”
+[U45] Leonin Infiltrator {2}{G}{W}
+Artifact Creature — Cat Scout (3/3)
+Titanic — Leonin Infiltrator can't be blocked by creatures with power 2 or less.
+Whenever Leonin Infiltrator deals combat damage to a player, draw a card.
+Silent as a shadow, sharp as a blade.
+[U46] Anima's Thunderbolt {1}{R}{G}
+Instant
+Destroy target artifact. Anima's Thunderbolt deals 3 damage to that artifact's controller.
+The Anima screams, and the metal shatters.
+[U47] Slave of Bolas {3}{U/R}{B}
+Sorcery
+Gain control of target creature. Untap it. It gains haste until end of turn. Sacrifice it at the beginning of the next end step.
+His mind is gone, but his hunger remains.
+[U48] Bituminous Blast {3}{B}{R}
+Instant
+Cascade
+Bituminous Blast deals 4 damage to target creature.
+The earth of Jund remembers the magma.
+[U49] Bloodbraid Elf {2}{R}{G}
+Creature — Elf Berserker (3/2)
+Haste, Cascade
+She leads the charge not for glory, but for the sheer thrill of existing.
+[U50] Sigil's Glare {W}
+Instant
+Exile target creature. Its controller creates a 1/1 white Soldier creature token.
+“Look into the light and see your inadequacy.”
+[U51] Grixis Manipulation {1}{U}{B}
+Instant
+Choose one or both —
+                     * Counter target creature spell.
+                     * Return target creature card from your graveyard to your hand.
+Life and death are just variables in the equation.
+[U52] Foundry of the Third Era {W/B}{U}
+Artifact
+{1}, Sacrifice a nontoken artifact: Create a 1/1 blue Thopter artifact creature token with flying. You gain 1 life.
+The work continues.
+[U53] Qasali Stalker {1}{G}{W}
+Creature — Cat Warrior (2/3)
+Reach
+If a creature is attacking you and you control a Forest and a Plains, you may cast Qasali Stalker without paying its mana cost and as though it had flash.
+They strike from nowhere, vanishing before the enemy hits the ground.
+[U54] Fieldmist Borderpost {1}{W}{U}
+Artifact
+You may pay {1} and return a basic land you control to its owner's hand rather than pay this spell's mana cost.
+Fieldmist Borderpost enters the battlefield tapped.
+{T}: Add {W} or {U}.
+Where the golden fields of Bant meet the mists of Esper.
+[U55] Mistvein Borderpost {1}{U}{B}
+Artifact
+You may pay {1} and return a basic land you control to its owner's hand rather than pay this spell's mana cost.
+Mistvein Borderpost enters the battlefield tapped.
+{T}: Add {U} or {B}.
+Where the logic of Esper dissolves into the madness of Grixis.
+[U56] Veinfire Borderpost {1}{B}{R}
+Artifact
+You may pay {1} and return a basic land you control to its owner's hand rather than pay this spell's mana cost.
+Veinfire Borderpost enters the battlefield tapped.
+{T}: Add {B} or {R}.
+Where the rot of Grixis burns in the fires of Jund.
+[U57] Firewild Borderpost {1}{R}{G}
+Artifact
+You may pay {1} and return a basic land you control to its owner's hand rather than pay this spell's mana cost.
+Firewild Borderpost enters the battlefield tapped.
+{T}: Add {R} or {G}.
+Where the peaks of Jund overlook the jungles of Naya.
+[U58] Wildfield Borderpost {1}{G}{W}
+Artifact
+You may pay {1} and return a basic land you control to its owner's hand rather than pay this spell's mana cost.
+Wildfield Borderpost enters the battlefield tapped.
+{T}: Add {G} or {W}.
+Where the lush forests of Naya give way to the plains of Bant.
+[U59] Sigil of the New Dawn {1}{W}{W}
+Enchantment
+Covenant — Whenever a creature you control dies, if it was modified, return it to your hand.
+“Death shall not claim the worthy.”
+[U60] Rot-Lord's Intimidation {2}{B}{B}
+Sorcery
+Target player reveals their hand. You choose a nonland card from it. That player discards that card.
+Carnage — If a permanent you control was put into a graveyard from the battlefield this turn, you choose an additional nonland card from it. That player discards that card.
+Fear is a potent weapon.
+[U61] Vitalist's Bloom {2}{G}
+Sorcery
+Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+Create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on target creature.
+The forest reclaims the machine.
+[U62] Dregscape Specter {1}{U}{B}
+Creature — Specter (2/1)
+Flying
+Whenever Dregscape Specter deals combat damage to a player, that player discards a card.
+Exhume {2}{U}{B}
+It steals memories to replace its own lost life.
+[U63] Baloth of the Conflux {4}{G}{G}
+Creature — Beast (6/6)
+Trample
+Titanic — When Baloth of the Conflux enters the battlefield, if you control another creature with power 4 or greater, fight target creature you don't control.
+A living earthquake.
+[U64] Etherium Logic-Knot {U}{U}
+Instant
+Counter target spell unless its controller pays {X}, where X is the number of artifacts you control.
+“Your spell is flawed. I have corrected it.”
+[U65] Rhox Duelist {1}{W}
+Creature — Rhox Soldier (2/2)
+Covenant — Rhox Duelist has Double Strike as long as you control a modified creature.
+She moves with the grace of a dancer and the lethality of a viper.
+[U66] Grixis Grimblade {B/R}
+Creature — Zombie Warrior (2/1)
+Exhume {1}{B}{R}
+Grixis Grimblade gets +1/+1 as long as you control another multicolor permanent.
+A weapon forged from malice.
+[U67] Naya Swiftblade {G/W}
+Creature — Elf Rogue (2/2)
+Titanic — Naya Swiftblade gets +1/+1 and has Hexproof as long as you control a creature with power 4 or greater.
+He moves unseen, striking only when the kill is assured.
+[U68] Esper Stormblade {W/U}
+Artifact Creature — Vedalken Soldier (1/1)
+Flying
+Fabricate 1
+A storm of blades and etherium.
+[U69] Jund Flesh-Eater {B/R}
+Creature — Viashino Shaman (3/2)
+Haste
+At the beginning of your end step, sacrifice Jund Flesh-Eater unless a creature died this turn.
+He lives fast and dies young.
+[U70] Bant Sureblade {G/U}
+Creature — Human Soldier (2/1)
+First Strike
+Covenant — Bant Sureblade gets +1/+1 as long as you control a modified creature.
+He strikes with unerring accuracy.
+[U71] Illusionary Servant {1}{U}
+Creature — Illusion (4/4)
+Flying
+When Illusionary Servant becomes the target of a spell or ability, sacrifice it.
+A loyal servant, until the moment you look too closely.
+[U72] Ruin-Shard Gargoyle {3}
+Artifact Creature — Gargoyle (2/2)
+Flying
+{2}, Sacrifice Ruin-Shard Gargoyle: Destroy target multicolored permanent.
+It watches over the ruins of a broken world.
+[U73] Obelisk of Alara {3}
+Artifact
+{T}: Add one mana of any color.
+{1}{W}, {T}: Gain 5 life.
+{1}{U}, {T}: Draw a card, discard a card.
+{1}{B}, {T}: Target opponent loses 2 life and you gain 2 life.
+{1}{R}, {T}: Deal 3 damage to target player.
+{1}{G}, {T}: Target creature gets +4/+4.
+It stands as a needle, stitching the planes together.
+[U74] Etherium Gargantuan {5}{W}{U}
+Artifact Creature — Beast (4/4)
+Flying
+When Etherium Gargantuan enters the battlefield, you gain 3 life for each artifact you control.
+A vision of perfection.
+[U75] Carnage Horror {3}{B}{B}{R}
+Creature — Horror (5/5)
+Flying, Menace
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, target opponent loses 1 life.
+He revels in the suffering of others.
+[U76] Sphinx of the Spectrum {4}{W}{U}{B}
+Artifact Creature — Sphinx (5/4)
+Flying
+Spectrum — Whenever you cast a multicolored spell, Scry 2.
+It sees the patterns in the chaos.
+[U77] Rot-Lord's Lhurgoyf {1}{B}{G}
+Creature — Lhurgoyf (*)
+Rot-Lord's Lhurgoyf's power and toughness are each equal to the number of creature cards in all graveyards.
+Carnage — Whenever a permanent you control is put into a graveyard from the battlefield, mill 2 cards.
+“Ach! Hans, run! It’s the Lhurgoyf!”
+[U78] Titanic Griffin {2}{R}{G}{W}
+Creature — Griffin (2/2)
+Flying
+Titanic — Titanic Griffin gets +2/+2 and has vigilance as long as you control a creature with power 4 or greater.
+It soars above the jungle, a guardian of the wild.
+[U79] Purist Breaker {2}{W}
+Creature — Human Soldier (3/2)
+Vigilance
+Covenant — Whenever Purist Breaker attacks, if you control a modified creature, tap target creature an opponent controls.
+“The wall has fallen. The crusade begins.”
+[U80] Funeral of Minds {U}{B}
+Sorcery
+Target opponent reveals cards from the top of their library until four land cards are revealed. That player puts all cards revealed this way into their graveyard.
+Spectrum — If you cast a multicolored spell this turn, that player discards a card.
+“Your thoughts are fleeting. Let me help you forget them.”
+COMMONS (101)
+[C01] Rhox Sigil-Bearer {W}
+Creature — Rhox Soldier (1/1)
+Covenant — As long as you control a modified creature, Rhox Sigil-Bearer gets +1/+1.
+The sigils are no longer just marks of honor; they are licenses to kill.
+[C02] Ardent Aven {W}
+Creature — Bird Soldier (1/1)
+{T}: Tap target creature with power 4 or greater.
+Covenant — {T}: Tap target creature. Activate only if you control a modified creature.
+“I serve the angels, not the bureaucrats.”
+[C03] Sigil of Submission {1}{W}
+Enchantment — Aura
+Enchant creature
+Enchanted creature can't attack or block.
+Covenant — As long as you control a modified creature, enchanted creature loses all activated abilities.
+“Peace is enforced, not requested.”
+[C04] Blessed Armaments {1}{W}
+Instant
+Put a +1/+1 counter on target creature. It gains indestructible until end of turn.
+“Steel allows us to survive. Faith allows us to win.”
+[C05] Court Homunculus {W}
+Artifact Creature — Homunculus (1/1)
+Court Homunculus gets +1/+1 as long as you control another artifact.
+It doesn't know why it shines, only that it must.
+[C06] Human Observer {2}{U}
+Creature — Human Wizard (1/3)
+Fabricate 1
+{T}: Tap target artifact or creature.
+“The etherium charts are wrong. The stars are moving.”
+[C07] Etherium Spinner {2}{U}
+Artifact Creature — Vedalken Wizard (2/1)
+Flying
+Fabricate 1
+“Weaving flesh into the lattice requires a delicate touch.”
+[C08] Etherium Skywhale {4}{U}
+Artifact Creature — Whale (3/4)
+Flying
+Fabricate 2
+A cloud that blocks the sun, made of metal that eats the light.
+[C09] Vedalken Looter {1}{U}
+Creature — Vedalken Wizard (1/2)
+{T}: Draw a card, then discard a card.
+“History is heavy. Best to drop some of it.”
+[C10] Aether Tow {1}{U}
+Instant
+Return target creature to its owner's hand.
+Spectrum — If you cast a multicolored spell this turn, Scry 2.
+“Go back to where you belong. Or where you used to belong.”
+[C11] Rotting Rats {1}{B}
+Creature — Rat (1/1)
+When Rotting Rats enters the battlefield, each player discards a card.
+Exhume {B}
+They don't know they're dead. They just know they're hungry.
+[C12] Blighted Carrier {1}{B}
+Creature — Zombie Beast (2/1)
+When Blighted Carrier dies, target creature gets -1/-1 until end of turn.
+Exhume {B}
+It carries the old plagues to the new world.
+[C13] Dregscape Zombie {B}
+Creature — Zombie (2/1)
+Dregscape Zombie enters the battlefield tapped.
+Exhume {B}
+The earth refuses to keep them.
+[C14] Vis-Caste Sorcerer {1}{B}
+Creature — Human Wizard (1/2)
+{T}: Target player mills 1 card. Target opponent loses 1 life.
+Spectrum — Whenever you cast a multicolored spell, untap Vis-Caste Sorcerer.
+“I see the death of worlds. It looks like home.”
+[C15] Feed the Maelstrom {B}
+Instant
+As an additional cost to cast this spell, sacrifice a creature or artifact.
+Destroy target creature or planeswalker.
+The storm is always hungry.
+[C16] Grave Pact Ritual {1}{B}
+Instant
+Sacrifice a creature. Draw two cards.
+“One death to fuel the many.”
+[C17] Magma Burst {1}{R}
+Instant
+Magma Burst deals 3 damage to target creature.
+Titanic — If you control a creature with power 4 or greater, Magma Burst deals 1 damage to each creature your opponents control.
+The earth speaks in fire.
+[C18] Violent Outburst {1}{R}
+Instant
+Violent Outburst deals 3 damage to target creature.
+Carnage — If a permanent you control was put into a graveyard from the battlefield this turn, Violent Outburst deals 3 damage to that creature's controller.
+“Logic fails when the blood boils.”
+[C19] Furious Strike {1}{R}
+Sorcery
+Target creature you control gets +2/+0 until end of turn. It deals damage equal to its power to target creature you don't control.
+“Don't think. Hit.”
+[C20] Goblin War-Driver {1}{R}
+Creature — Goblin Warrior (2/1)
+Haste
+Whenever Goblin War-Driver attacks, other creatures you control get +1/+0 until end of turn.
+The drums of Jund beat in every heart.
+[C21] Viashino Firebrand {1}{R}
+Creature — Viashino Warrior (2/1)
+{R}, Sacrifice Viashino Firebrand: It deals 1 damage to any target.
+He burns brief and bright, a spark in the dark.
+[C22] Nacatl Surveyor {2}{G}
+Creature — Cat Scout (2/1)
+When Nacatl Surveyor enters the battlefield, look at the top 3 cards of your library. You may reveal a land card from among them and put it into your hand. Put the rest on the bottom of your library.
+Basic Landcycling {1}{R}
+“Maps are useless here. Follow the mana.”
+[C23] Savage Hunt {1}{G}
+Sorcery
+Put a +1/+1 counter on target creature you control. Then it fights target creature you don't control.
+Civilization ends at the tree line.
+[C24] Human Soil-Tiller {1}{G}
+Creature — Human Druid (1/2)
+{T}: Add {G}.
+Spectrum — {T}: Add one mana of any color. Activate only if you cast a multicolored spell this turn.
+The roots drink deep of strange waters.
+[C25] Wild Leotau {2}{G}
+Creature — Cat (3/2)
+Titanic — Wild Leotau gets +2/+2 as long as you control a creature with power 4 or greater.
+It remembers a time before the metal came.
+[C26] Cylian Giant {3}{G}
+Creature — Elf Warrior (2/4)
+Reach
+Titanic — When Cylian Giant enters the battlefield, if you control a creature with power 4 or greater, you gain 4 life.
+A mountain that walks.
+[C27] Canopy Stalker {3}{G}
+Creature — Spider (2/4)
+Reach
+Titanic — Canopy Stalker has Deathtouch as long as you control a creature with power 4 or greater.
+The shadows have teeth.
+[C28] Sigil of Shielding {W}
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +1/+1.
+Totem Armor
+Faith is the strongest armor.
+[C29] Filigree Courier {1}{W/U}
+Artifact Creature — Bird Scout (1/1)
+Flying
+When Filigree Courier dies, create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on target creature.
+Message for the sanctum: 'We are evolving.'
+[C30] Kathari Infiltrator {U/B}
+Creature — Bird Rogue (1/1)
+Kathari Infiltrator can't be blocked.
+Exhume {1}{U}{B}
+He walks through walls because he forgot they were there.
+[C31] Viashino Hackblade {B/R}
+Creature — Viashino Berserker (2/1)
+Haste
+Carnage — Viashino Hackblade gets +2/+0 as long as a permanent you control was put into a graveyard from the battlefield this turn.
+Sharp enough to cut bone. Heavy enough to break it.
+[C32] Naya Brawler {R/G}
+Creature — Viashino Warrior (2/1)
+Titanic — Naya Brawler has First Strike as long as you control a creature with power 4 or greater.
+He fights not for territory, but for the joy of the clash.
+[C33] Rot-Clan Executioner {B}{R}
+Instant
+Destroy target creature. It can't be regenerated.
+The verdict is death. The sentence is immediate.
+[C34] Blade of the Order {2}
+Artifact — Equipment (Bant)
+Equipped creature gets +1/+1 and has First Strike.
+Equip {2}
+{G}{W}{U}: Attach Blade of the Order to target creature you control. Activate this ability only any time you could cast an instant.
+Forged in Bant, bloodied in Grixis.
+[C35] Mask of the Artificer {2}
+Artifact — Equipment (Esper)
+Equipped creature gets +1/+1 and has Flying.
+Equip {2}
+{W}{U}{B}: Attach Mask of the Artificer to target creature you control. Activate this ability only any time you could cast an instant.
+The face of progress.
+[C36] Scythe of the Necropolis {2}
+Artifact — Equipment (Grixis)
+Equipped creature gets +2/+0 and has Deathtouch.
+Equip {2}
+{U}{B}{R}: Attach Scythe of the Necropolis to target creature you control. Activate this ability only any time you could cast an instant.
+It harvests more than grain.
+[C37] Claws of the Devourer {2}
+Artifact — Equipment (Jund)
+Equipped creature gets +2/+1 and has Menace.
+Equip {2}
+{B}{R}{G}: Attach Claws of the Devourer to target creature you control. Activate this ability only any time you could cast an instant.
+Become the dragon.
+[C38] Hammer of the Behemoth {2}
+Artifact — Equipment (Naya)
+Equipped creature gets +2/+2 and has Trample.
+Equip {3}
+{R}{G}{W}: Attach Hammer of the Behemoth to target creature you control. Activate this ability only any time you could cast an instant.
+Strike like the earth itself.
+[C39] Prism-Glass Amulet {2}
+Artifact
+{1}, {T}: Add one mana of any color.
+Spectrum — Whenever you cast a multicolored spell, you gain 1 life and Scry 1.
+“Look through the glass. The world is not broken; it is complete.”
+[C40] Evolving Wilds
+Land
+{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+The land shifts, seeking a new shape.
+[C41] Rupture Spire
+Land
+Rupture Spire enters the battlefield tapped.
+When Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.
+{T}: Add one mana of any color.
+A monument to the moment the worlds collided.
+[C42] Maelstrom Edge
+Land
+{T}, Sacrifice Maelstrom Edge: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+When you sacrifice Maelstrom Edge, you gain 1 life.
+Where reality wears thin.
+[C43] Crystal Grotto
+Land
+When Crystal Grotto enters the battlefield, Scry 1.
+{T}: Add {C}.
+{1}, {T}: Add one mana of any color.
+A quiet place in a loud world.
+[C44] Dawn-Ray Archer {1}{W}
+Creature — Human Archer (1/2)
+{T}: Dawn-Ray Archer deals 1 damage to target attacking or blocking creature.
+Covenant — {T}: Tap target creature. Activate only if you control a modified creature.
+Her arrows find the darkness.
+[C45] Shield-Wall Sentinel {2}{W}
+Creature — Human Soldier (0/4)
+Defender
+Covenant — As long as you control a modified creature, Shield-Wall Sentinel gets +0/+2 and can block an additional creature each combat.
+“Hold the line. No matter what comes.”
+[C46] Strategic Planning {1}{U}
+Sorcery
+Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard.
+The future is a puzzle to be solved.
+[C47] Dream Fracture {1}{U}{U}
+Instant
+Counter target spell. Its controller draws a card. You draw a card.
+“Your ambition exceeds your grasp.”
+[C48] Dredge the Ruins {2}{B}
+Sorcery
+Mill 3 cards, then return a creature card from your graveyard to your hand.
+To find the future, Grixis looks to the past.
+[C49] Flesh-Twist Plague {1}{B}
+Instant
+Target creature gets -2/-2 until end of turn.
+Carnage — If a permanent you control was put into a graveyard from the battlefield this turn, that creature gets -4/-4 until end of turn instead.
+The body rebels against itself.
+[C50] Spark-Rage Berserker {1}{R}
+Creature — Human Berserker (2/1)
+First Strike
+Carnage — Spark-Rage Berserker gets +2/+0 as long as a permanent you control was put into a graveyard from the battlefield this turn.
+Rage is a fuel that never runs dry.
+[C51] Crashing Rockslide {4}{R}
+Instant
+Crashing Rockslide deals 5 damage to target creature or planeswalker.
+Basic Landcycling {2}
+The mountain bows to no one.
+[C52] Vines of the Conflux {G}
+Sorcery
+Search your library for a basic land card, reveal it, and put it into your hand. If you control a creature with power 4 or greater, you may put that land onto the battlefield tapped instead. Shuffle.
+Life finds a way, even in the Maelstrom.
+[C53] Moss-Covered Hulk {4}{G}
+Creature — Beast (5/5)
+Titanic — Moss-Covered Hulk has Trample as long as you control another creature with power 4 or greater.
+Time claims everything, even the beasts.
+[C54] Bant Panorama
+Land
+{T}: Add {C}.
+{1}, {T}, Sacrifice Bant Panorama: Search your library for a Forest, Plains, or Island card, put it onto the battlefield tapped, then shuffle.
+From the high towers, one can see the sun glinting off distant seas and forests alike.
+[C55] Esper Panorama
+Land
+{T}: Add {C}.
+{1}, {T}, Sacrifice Esper Panorama: Search your library for a Plains, Island, or Swamp card, put it onto the battlefield tapped, then shuffle.
+The clouds part to reveal a landscape of order, now encroached upon by wild growth.
+[C56] Grixis Panorama
+Land
+{T}: Add {C}.
+{1}, {T}, Sacrifice Grixis Panorama: Search your library for an Island, Swamp, or Mountain card, put it onto the battlefield tapped, then shuffle.
+The dead lands are no longer silent; new life struggles to emerge from the decay.
+[C57] Jund Panorama
+Land
+{T}: Add {C}.
+{1}, {T}, Sacrifice Jund Panorama: Search your library for a Swamp, Mountain, or Forest card, put it onto the battlefield tapped, then shuffle.
+Volcanic peaks rise above the jungle canopy, a testament to the land's primal fury.
+[C58] Naya Panorama
+Land
+{T}: Add {C}.
+{1}, {T}, Sacrifice Naya Panorama: Search your library for a Mountain, Forest, or Plains card, put it onto the battlefield tapped, then shuffle.
+The vast jungle floor is a tapestry of life, woven with the threads of old magic.
+[C59] Crimson Sigil Recruit {1}{W}
+Creature — Leonin Soldier (2/1)
+{R}: Crimson Sigil Recruit gains First Strike until end of turn.
+“The sword is not enough. One must have the fire to wield it.”
+[C60] Blind Court Enforcer {2}{U}
+Creature — Vedalken Wizard (1/4)
+Defender
+{W}, {T}: Tap target creature that shares a color with a creature you control.
+“Similarity breeds order. Difference breeds dissent.”
+[C61] Vitalist Sprout-Bot {1}{G}
+Artifact Creature — Construct (1/1)
+{T}: Add {1} mana of any color. Spend this mana only to cast artifact spells.
+Fabricate 1
+Nature and artifice, growing together.
+[C62] Null-Keeper Sentry {3}{U}
+Artifact Creature — Golem (2/4)
+Vigilance
+Whenever an opponent casts a green spell, you may Scry 1.
+It watches the treeline with unblinking eyes, waiting for the infection to spread.
+[C63] Absolver Initiate {1}{B}
+Creature — Skeleton Cleric (1/2)
+{W}, {T}: You gain 1 life.
+Exhume {W}{B}
+“Even in death, I serve the light.”
+[C64] Rot-Lord Scavenger {2}{B}
+Creature — Human Rogue (2/2)
+When Rot-Lord Scavenger dies, target opponent loses 2 life.
+“If it lives, kill it. If it dies, eat it.”
+[C65] Stone-Shaper Apprentice {R}
+Creature — Viashino Artificer (1/1)
+{2}, {T}: Target creature gains Haste until end of turn. If that creature is an artifact, it also gets +1/+0.
+“Stone is strong. Steel is stronger. But speed kills best.”
+[C66] Apex Stalker {3}{G}
+Creature — Viashino Warrior (3/3)
+Carnage — When a permanent you control is put into a graveyard from the battlefield, Apex Stalker gains Menace until end of turn.
+It hunts not for food, but for sport.
+[C67] Steel-Leaf Guardian {2}{G}
+Artifact Creature — Elf Warrior (2/2)
+Titanic — Steel-Leaf Guardian gets +1/+1 and has Reach as long as you control a creature with power 4 or greater.
+“The forest has new armor.”
+[C68] Anima's Vandal {2}{R}
+Creature — Human Shaman (3/2)
+When Anima's Vandal enters the battlefield, you may destroy target artifact with mana value 2 or less.
+“Tear down their idols of iron!”
+[C69] Esper Logic-Ward {U}
+Instant
+Counter target spell that targets a permanent you control.
+Create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on target creature.
+The best defense is a calculated offense.
+[C70] Naya Might {G}
+Instant
+Target creature gets +2/+2 until end of turn.
+Titanic — If you control a creature with power 4 or greater, that creature gets +4/+4 instead.
+Strength respects strength.
+[C71] Grixis Rot-Call {1}{B}
+Sorcery
+Return up to two target creature cards from your graveyard to your hand. You lose 2 life.
+The grave is not a prison; it is a waiting room.
+[C72] Bant Peacekeeper {1}{W}
+Creature — Rhox Soldier (2/2)
+Covenant — Bant Peacekeeper has Lifelink as long as you control a modified creature.
+Peace is a garden that must be tended with blood.
+[C73] Jund Battle-Cry {2}{R}
+Instant
+Creatures you control get +2/+0 until end of turn.
+Carnage — If a creature died this turn, creatures you control also gain First Strike until end of turn.
+The dragons roar, and the world trembles.
+[C74] Stone-Shaper Volley {R}
+Instant
+Stone-Shaper Volley deals 2 damage to target attacking or blocking creature.
+Carnage — If a creature died this turn, Stone-Shaper Volley deals 4 damage to that creature instead.
+A hail of jagged stone and sharpened steel.
+[C75] Etherium Shield {1}{U}
+Instant
+Target creature gains Hexproof until end of turn.
+Create a 1/1 colorless Servo artifact creature token or put a +1/+1 counter on that creature.
+“Perfection is shielded by logic.”
+[C76] Sigil of Bravery {W}
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +1/+2.
+Covenant — As long as you control another modified creature, enchanted creature has Vigilance.
+A sigil shared is a burden halved.
+[C77] Rot-Hollow Infestation {3}{B}
+Creature — Insect Horror (2/2)
+When Rot-Hollow Infestation dies, create two 1/1 green Saproling creature tokens.
+Life springs from death in the most disturbing ways.
+[C78] Fling {1}{R}
+Instant
+As an additional cost to cast this spell, sacrifice a creature.
+Fling deals damage equal to the sacrificed creature's power to any target.
+They built walls. We taught them to fall.
+[C79] Steel-Leaf Archer {1}{G}
+Creature — Elf Archer (1/2)
+Reach
+Titanic — {T}: Steel-Leaf Archer deals 1 damage to target creature with flying. Activate only if you control a creature with power 4 or greater.
+“Even the sky is not safe from the forest.”
+[C80] Vitalist Repair-Bot {2}{W}
+Artifact Creature — Construct (1/3)
+When Vitalist Repair-Bot enters the battlefield, you may return target artifact card with mana value 2 or less from your graveyard to your hand.
+Repair. Rebuild. Renew.
+[C81] Null-Keeper Reject {3}{U}
+Creature — Homunculus (0/5)
+Defender
+{T}: Target player mills 2 cards.
+Flawed. Imperfect. Discarded.
+[C82] Absolver's Blessing {W}
+Instant
+Target creature gets +1/+1 and gains protection from black and from red until end of turn.
+“The light protects those who seek redemption.”
+[C83] Rot-Lord's Greed {2}{B}
+Sorcery
+Target player discards two cards.
+Carnage — If a creature died this turn, you draw a card.
+“Your loss is my gain. Your death is my feast.”
+[C84] Stone-Shaper Grunt {1}{R}
+Creature — Goblin Warrior (2/1)
+Carnage — When a creature dies, Stone-Shaper Grunt gets +1/+0 until end of turn.
+He lives for the moment the big ones fall.
+[C85] Apex Survivalist {1}{G}
+Creature — Viashino Scout (2/1)
+When Apex Survivalist enters the battlefield, you may put a land card from your hand onto the battlefield tapped.
+He knows the jungle better than the beasts do.
+[C86] Steel-Leaf Might {1}{G}
+Instant
+Target creature gets +2/+2 until end of turn. Untap it.
+Nature strikes back with the strength of steel.
+[C87] Anima's Smasher {2}{R}
+Creature — Human Berserker (3/2)
+When Anima's Smasher enters the battlefield, destroy target artifact.
+“Bring them down to the earth!”
+[C88] Crimson Sigil Squire {W}
+Creature — Human Soldier (1/1)
+Covenant — Crimson Sigil Squire gets +1/+1 as long as you control a modified creature.
+“I carry the banner for those who lead the charge.”
+[C89] Blind Court Scribe {1}{U}
+Creature — Vedalken Wizard (1/3)
+{T}: Draw a card, then discard a card.
+“History is written by the victors. We ensure they win.”
+[C90] Vitalist Gardener {2}{G}
+Creature — Elf Druid (0/2)
+{T}: Add {G} for each artifact you control.
+She tends to the gears as if they were flowers.
+[C91] Null-Keeper Ward {2}
+Artifact
+{T}: Add {C}.
+{2}, {T}, Sacrifice Null-Keeper Ward: Counter target multicolored spell.
+“Purity must be maintained at all costs.”
+[C92] Absolver's Duty {1}{W}
+Enchantment
+When a creature you control dies, you gain 2 life.
+“Death is a service. Life is a reward.”
+[C93] Rot-Lord's Pet {B}
+Creature — Zombie Rat (1/1)
+Deathtouch
+Even the smallest bite can be fatal.
+[C94] Stone-Shaper Tactics {1}{R}
+Instant
+Target creature gains Double Strike until end of turn.
+“Hit them twice. Just to be sure.”
+[C95] Apex Hunt {1}{G}
+Sorcery
+Target creature you control fights target creature you don't control.
+Only the strong survive the hunt.
+[C96] Steel-Leaf Harness {2}
+Artifact — Equipment
+Equipped creature gets +1/+1.
+Titanic — Equipped creature gets +2/+2 and has Trample instead as long as you control a creature with power 4 or greater.
+Equip {2}
+Forged from the fallen shells of Esper.
+[C97] Anima's Warning {R}
+Instant
+Anima's Warning deals 2 damage to target creature or planeswalker.
+The jungle does not give second chances.
+[C98] Banner of the Crimson Sigil {2}
+Artifact
+{T}: Add {1} mana of any color.
+Covenant — {1}{R}{W}, {T}: Put a +1/+1 counter on target creature. Activate only if you control a modified creature.
+A rallying cry for the faithful.
+[C99] Blind Court Lock {1}{U}
+Enchantment — Aura
+Enchant artifact or creature
+Enchanted permanent doesn't untap during its controller's untap step.
+Stasis is the ultimate form of order.
+[C100] Vitalist Growth {G}
+Instant
+Put a +1/+1 counter on target creature. Untap it.
+Growth is inevitable. Adaptation is key.
+[C101] Null-Keeper Gargoyle {3}
+Artifact Creature — Gargoyle (2/3)
+Flying
+Spells your opponents cast that target Null-Keeper Gargoyle cost {2} more to cast.
+It stands against the chaos, unyielding and eternal.
+BASIC LANDS (15)
+[L01-L03] Plains
+[L04-L06] Island
+[L07-L09] Swamp
+[L10-L12] Mountain
+[L13-L15] Forest
