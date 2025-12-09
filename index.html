@@ -63,10 +63,27 @@
 
     .card-data { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
     
-    /* FLEX HEADER - NO WRAP */
-    .card-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; font-weight: bold; font-size: 1.1em; white-space: nowrap; }
-    .card-name { flex: 1; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
-    .card-cost { flex: 0 0 auto; text-align: right; }
+    /* FLEX HEADER - WRAPPING ENABLED */
+    .card-header { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: flex-start; /* Align to top so cost stays high if name wraps */
+        gap: 10px; 
+        margin-bottom: 8px; 
+        font-weight: bold; 
+        font-size: 1.1em; 
+    }
+    .card-name { 
+        flex: 1; 
+        word-wrap: break-word; /* Ensure long words don't overflow */
+        line-height: 1.25;
+    }
+    .card-cost { 
+        flex: 0 0 auto; 
+        text-align: right; 
+        margin-top: 2px; /* Slight visual adjustment for alignment */
+        white-space: nowrap; /* Keep symbols on one line */
+    }
 
     .card-type-line { font-size: 0.85em; font-weight: 600; color: var(--text-dim); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #444; }
     .card-text-box { font-size: 0.95em; line-height: 1.4; flex-grow: 1; }
