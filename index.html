@@ -13,13 +13,36 @@
       --border: #444;
       --text: #eee;
       --text-dim: #aaa;
+      --accent: #d4a017;
     }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); padding: 40px 20px; }
-    h1 { text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; }
     
-    .controls { max-width: 600px; margin: 0 auto 40px auto; }
+    /* HEADER SECTION */
+    header { max-width: 900px; margin: 0 auto 50px auto; text-align: center; }
+    h1 { text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-size: 2.5em; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; }
+    
+    .info-section { 
+        background: var(--surface); 
+        border: 1px solid var(--border); 
+        border-radius: 8px; 
+        padding: 20px; 
+        text-align: left; 
+        margin-top: 30px;
+    }
+    .info-section h2 { margin-top: 0; color: var(--accent); font-size: 1.2em; border-bottom: 1px solid #444; padding-bottom: 5px; }
+    .info-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    @media (max-width: 768px) { .info-cols { grid-template-columns: 1fr; } }
+    
+    .flavor-text p { font-style: italic; color: #ccc; line-height: 1.5; margin-bottom: 10px; }
+    .mechanics-list ul { padding-left: 20px; margin: 0; }
+    .mechanics-list li { margin-bottom: 8px; line-height: 1.4; color: #ddd; }
+    .mechanics-list strong { color: #fff; }
+
+    /* CONTROLS */
+    .controls { max-width: 600px; margin: 40px auto; }
     input#search { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: #333; color: #fff; font-size: 16px; box-sizing: border-box; }
 
+    /* GRID */
     .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; max-width: 1400px; margin: 0 auto; }
     
     .card-container { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
@@ -39,31 +62,40 @@
     .card-container.land .card-image-wrapper { border-color: #BFA586; }
 
     .card-data { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
-    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; font-weight: bold; font-size: 1.1em; }
-    .card-type-line { font-size: 0.85em; font-weight: 600; color: var(--text-dim); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #444; }
     
+    /* FLEX HEADER - NO WRAP */
+    .card-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; font-weight: bold; font-size: 1.1em; white-space: nowrap; }
+    .card-name { flex: 1; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    .card-cost { flex: 0 0 auto; text-align: right; }
+
+    .card-type-line { font-size: 0.85em; font-weight: 600; color: var(--text-dim); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #444; }
     .card-text-box { font-size: 0.95em; line-height: 1.4; flex-grow: 1; }
     .card-text-box p { margin: 0 0 6px 0; }
     
-    /* FLAVOR TEXT STYLING */
-    .card-flavor { 
-        margin-top: 12px; 
-        padding-top: 10px; 
-        border-top: 1px solid rgba(255,255,255,0.15); 
-        font-style: italic; 
-        font-family: 'Georgia', serif; 
-        color: #bbb;
-        font-size: 0.9em;
-    }
+    .card-flavor { margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.15); font-style: italic; font-family: 'Georgia', serif; color: #bbb; font-size: 0.9em; }
     .card-flavor p { margin: 0 0 4px 0; }
-
     .card-footer { margin-top: 10px; text-align: right; font-size: 0.75em; color: #666; font-family: monospace; }
-    
     .ms-cost { font-size: 0.85em; margin: 0 1px; vertical-align: middle; }
   </style>
 </head>
 <body>
-  <h1>Alara Resurgent</h1>
+
+  <header>
+    <h1>Alara Resurgent</h1>
+    <div class="info-section">
+      <div class="info-cols">
+        <div class="flavor-text">
+          <h2>The World</h2>
+          <p>The Setting: It has been 30 years since the Conflux. The five shards have physically merged, but the psychological scars remain. The central conflict is no longer "Shard vs. Shard," but a civil war within each culture about how to adapt to a world with all five colors of mana.</p><p>The Central Conflict: Synthesis vs. Purity</p><p>* The Synthesists: Factions that embrace the new colors of mana flooding their lands.</p><p>* The Purists: Zealots who view the new mana as pollution and violently enforce old borders.</p>
+        </div>
+        <div class="mechanics-list">
+          <h2>Mechanical Identities</h2>
+          <ul><li><strong>Fabricate N (Esper - WUB):</strong> When this creature enters the battlefield, put N +1/+1 counters on it or create N 1/1 colorless Servo artifact creature tokens. (Restricted to Creatures/Vehicles).</li><li><strong>Covenant (Bant - GWU):</strong> Abilities that are active or enhanced as long as you control a modified creature (a creature with a counter, Equipment, or Aura on it).</li><li><strong>Exhume [Cost] (Grixis - UBR):</strong> You may cast this spell from your graveyard by paying [Cost] and exiling a creature card from your graveyard.</li><li><strong>Carnage (Jund - BRG):</strong> Triggers whenever a permanent you control is put into a graveyard from the battlefield.</li><li><strong>Titanic (Naya - RGW):</strong> Abilities that are active or enhanced if you control a creature with power 4 or greater.</li><li><strong>Spectrum (5-Color):</strong> Triggers whenever you cast a multicolored spell.</li></ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="controls"><input type="text" id="search" placeholder="Filter by Name, Type, or Rules..." onkeyup="filterCards()"></div>
   <div class="gallery" id="gallery">
       <div class="card-container gold" data-name="varrus, the steel-sower" data-type="legendary artifact creature — human artificer (2/3)" data-text="ward — sacrifice an artifact. other artifact creatures you control get +1/+1. whenever another nontoken artifact enters the battlefield under your control, fabricate 1.">
@@ -72,7 +104,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Varrus, the Steel-Sower</div>
+            <div class="card-name" title="Varrus, the Steel-Sower">Varrus, the Steel-Sower</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Artifact Creature — Human Artificer (2/3)</div>
@@ -92,7 +124,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Xanatos, Grand Unifier</div>
+            <div class="card-name" title="Xanatos, Grand Unifier">Xanatos, Grand Unifier</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Artifact Creature — Sphinx (4/4)</div>
@@ -112,7 +144,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Convergence of Five Suns</div>
+            <div class="card-name" title="Convergence of Five Suns">Convergence of Five Suns</div>
             <div class="card-cost"><i class="ms ms-5 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -132,7 +164,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vorakesh, Apex of the Old Ways</div>
+            <div class="card-name" title="Vorakesh, Apex of the Old Ways">Vorakesh, Apex of the Old Ways</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Dragon (6/6)</div>
@@ -152,7 +184,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Jezal, the Crimson Sword</div>
+            <div class="card-name" title="Jezal, the Crimson Sword">Jezal, the Crimson Sword</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Angel Soldier (3/4)</div>
@@ -172,7 +204,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ajani, Soul of the Maelstrom</div>
+            <div class="card-name" title="Ajani, Soul of the Maelstrom">Ajani, Soul of the Maelstrom</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Planeswalker — Ajani (4)</div>
@@ -192,7 +224,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Tezzeret, the Flesh-Sculptor</div>
+            <div class="card-name" title="Tezzeret, the Flesh-Sculptor">Tezzeret, the Flesh-Sculptor</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Planeswalker — Tezzeret (3)</div>
@@ -212,7 +244,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sedris, King of the Sanctified</div>
+            <div class="card-name" title="Sedris, King of the Sanctified">Sedris, King of the Sanctified</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Zombie Warrior (5/5)</div>
@@ -232,7 +264,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Mayael, Voice of Steel</div>
+            <div class="card-name" title="Mayael, Voice of Steel">Mayael, Voice of Steel</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Elf Druid (2/3)</div>
@@ -252,7 +284,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Scars of the Dragon God</div>
+            <div class="card-name" title="Scars of the Dragon God">Scars of the Dragon God</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -272,7 +304,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Avatar of the Maelstrom</div>
+            <div class="card-name" title="Avatar of the Maelstrom">Avatar of the Maelstrom</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Avatar (10/10)</div>
@@ -292,7 +324,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rafiq's Memorial</div>
+            <div class="card-name" title="Rafiq's Memorial">Rafiq's Memorial</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Artifact</div>
@@ -312,7 +344,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sharuum, the Biosynth</div>
+            <div class="card-name" title="Sharuum, the Biosynth">Sharuum, the Biosynth</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Artifact Creature — Sphinx (5/5)</div>
@@ -332,7 +364,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Thraximundar, the Rot-Bound</div>
+            <div class="card-name" title="Thraximundar, the Rot-Bound">Thraximundar, the Rot-Bound</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Zombie Assassin (6/6)</div>
@@ -352,7 +384,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Maelstrom Nexus</div>
+            <div class="card-name" title="Maelstrom Nexus">Maelstrom Nexus</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Enchantment</div>
@@ -372,7 +404,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Solar Reckoning</div>
+            <div class="card-name" title="Solar Reckoning">Solar Reckoning</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -392,7 +424,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Glint-Steel Archon</div>
+            <div class="card-name" title="Glint-Steel Archon">Glint-Steel Archon</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Archon (4/4)</div>
@@ -412,7 +444,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Doppelganger of the Depths</div>
+            <div class="card-name" title="Doppelganger of the Depths">Doppelganger of the Depths</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Shapeshifter (0/0)</div>
@@ -432,7 +464,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Master of the Foundries</div>
+            <div class="card-name" title="Master of the Foundries">Master of the Foundries</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Vedalken Artificer (2/4)</div>
@@ -452,7 +484,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grixis Lich-Lord</div>
+            <div class="card-name" title="Grixis Lich-Lord">Grixis Lich-Lord</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Wizard (3/3)</div>
@@ -472,7 +504,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Pyre-Scale Hellkite</div>
+            <div class="card-name" title="Pyre-Scale Hellkite">Pyre-Scale Hellkite</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Dragon (5/5)</div>
@@ -492,7 +524,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Hydra</div>
+            <div class="card-name" title="Apex Hydra">Apex Hydra</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Hydra (4/4)</div>
@@ -512,7 +544,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Conflux Titan</div>
+            <div class="card-name" title="Conflux Titan">Conflux Titan</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Giant (6/6)</div>
@@ -532,7 +564,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ancient of the Maelstrom</div>
+            <div class="card-name" title="Ancient of the Maelstrom">Ancient of the Maelstrom</div>
             <div class="card-cost"><i class="ms ms-5 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elemental (7/7)</div>
@@ -552,7 +584,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Decree of Assimilation</div>
+            <div class="card-name" title="Decree of Assimilation">Decree of Assimilation</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -572,7 +604,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Mind-Link Exosuit</div>
+            <div class="card-name" title="Mind-Link Exosuit">Mind-Link Exosuit</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Equipment Construct (1/1)</div>
@@ -592,7 +624,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Chrome-Clad Eidolon</div>
+            <div class="card-name" title="Chrome-Clad Eidolon">Chrome-Clad Eidolon</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment Creature — Spirit Artificer (1/1)</div>
@@ -612,7 +644,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil-Breaker Valeros</div>
+            <div class="card-name" title="Sigil-Breaker Valeros">Sigil-Breaker Valeros</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Legendary Creature — Angel Soldier (3/3)</div>
@@ -632,7 +664,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Necrotic Sanctifier</div>
+            <div class="card-name" title="Necrotic Sanctifier">Necrotic Sanctifier</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Cleric (3/2)</div>
@@ -652,7 +684,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex of the Feast</div>
+            <div class="card-name" title="Apex of the Feast">Apex of the Feast</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Dragon (5/4)</div>
@@ -672,7 +704,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Soul of the Wilds</div>
+            <div class="card-name" title="Soul of the Wilds">Soul of the Wilds</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Avatar (6/6)</div>
@@ -692,7 +724,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Knight-Captain of Valeron</div>
+            <div class="card-name" title="Knight-Captain of Valeron">Knight-Captain of Valeron</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rhox Knight (3/3)</div>
@@ -712,7 +744,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Avatar of the Conflux</div>
+            <div class="card-name" title="Avatar of the Conflux">Avatar of the Conflux</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elemental Avatar (8/8)</div>
@@ -732,7 +764,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Aven Ascendant</div>
+            <div class="card-name" title="Aven Ascendant">Aven Ascendant</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Bird Soldier (3/3)</div>
@@ -752,7 +784,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ascendant of Progress</div>
+            <div class="card-name" title="Ascendant of Progress">Ascendant of Progress</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Sphinx (3/3)</div>
@@ -772,7 +804,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ascendant of Ruin</div>
+            <div class="card-name" title="Ascendant of Ruin">Ascendant of Ruin</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Demon (3/3)</div>
@@ -792,7 +824,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ascendant of the Feast</div>
+            <div class="card-name" title="Ascendant of the Feast">Ascendant of the Feast</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Shaman (4/3)</div>
@@ -812,7 +844,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ascendant of Might</div>
+            <div class="card-name" title="Ascendant of Might">Ascendant of Might</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast Shaman (3/3)</div>
@@ -832,7 +864,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Prism-Lens Construct</div>
+            <div class="card-name" title="Prism-Lens Construct">Prism-Lens Construct</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Golem (2/2)</div>
@@ -852,7 +884,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Prismatic Henge</div>
+            <div class="card-name" title="Prismatic Henge">Prismatic Henge</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -872,7 +904,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Boon-Bringer Lammasu</div>
+            <div class="card-name" title="Boon-Bringer Lammasu">Boon-Bringer Lammasu</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Lammasu (4/4)</div>
@@ -892,7 +924,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Master of Transmutations</div>
+            <div class="card-name" title="Master of Transmutations">Master of Transmutations</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Wizard (2/2)</div>
@@ -912,7 +944,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grave-Titan's Command</div>
+            <div class="card-name" title="Grave-Titan's Command">Grave-Titan's Command</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -932,7 +964,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Hellion's Outburst</div>
+            <div class="card-name" title="Hellion's Outburst">Hellion's Outburst</div>
             <div class="card-cost"><i class="ms ms-5 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -952,7 +984,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Resurgent Wilds</div>
+            <div class="card-name" title="Resurgent Wilds">Resurgent Wilds</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -972,7 +1004,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist's Greenhouse</div>
+            <div class="card-name" title="Vitalist's Greenhouse">Vitalist's Greenhouse</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -992,7 +1024,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Decree</div>
+            <div class="card-name" title="Blind Court Decree">Blind Court Decree</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -1012,7 +1044,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver's Resurrection</div>
+            <div class="card-name" title="Absolver's Resurrection">Absolver's Resurrection</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -1032,7 +1064,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Gargantuan</div>
+            <div class="card-name" title="Steel-Leaf Gargantuan">Steel-Leaf Gargantuan</div>
             <div class="card-cost"><i class="ms ms-5 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Beast</div>
@@ -1052,7 +1084,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Vanguard</div>
+            <div class="card-name" title="Stone-Shaper Vanguard">Stone-Shaper Vanguard</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -1072,7 +1104,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Colossus</div>
+            <div class="card-name" title="Null-Keeper Colossus">Null-Keeper Colossus</div>
             <div class="card-cost"><i class="ms ms-7 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Golem</div>
@@ -1092,7 +1124,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crusade of the Crimson Sigil</div>
+            <div class="card-name" title="Crusade of the Crimson Sigil">Crusade of the Crimson Sigil</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -1112,7 +1144,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Executioner</div>
+            <div class="card-name" title="Rot-Lord's Executioner">Rot-Lord's Executioner</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Warrior (4/3)</div>
@@ -1132,7 +1164,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Justiciar</div>
+            <div class="card-name" title="Blind Court Justiciar">Blind Court Justiciar</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Knight (3/3)</div>
@@ -1152,7 +1184,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crimson Sigil Warlord</div>
+            <div class="card-name" title="Crimson Sigil Warlord">Crimson Sigil Warlord</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Aven Soldier (3/2)</div>
@@ -1172,7 +1204,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Bioreactor</div>
+            <div class="card-name" title="Vitalist Bioreactor">Vitalist Bioreactor</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -1192,7 +1224,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Purge</div>
+            <div class="card-name" title="Null-Keeper Purge">Null-Keeper Purge</div>
             <div class="card-cost"><i class="ms ms-x ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -1212,7 +1244,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver Haunt</div>
+            <div class="card-name" title="Absolver Haunt">Absolver Haunt</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Spirit (4/4)</div>
@@ -1232,7 +1264,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Supremacy</div>
+            <div class="card-name" title="Rot-Lord's Supremacy">Rot-Lord's Supremacy</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -1252,7 +1284,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Siege-Engine</div>
+            <div class="card-name" title="Stone-Shaper Siege-Engine">Stone-Shaper Siege-Engine</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Juggernaut (5/3)</div>
@@ -1272,7 +1304,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Territory</div>
+            <div class="card-name" title="Apex Territory">Apex Territory</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -1292,7 +1324,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Ambush</div>
+            <div class="card-name" title="Steel-Leaf Ambush">Steel-Leaf Ambush</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1312,7 +1344,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Anima's Thunder-Hoof</div>
+            <div class="card-name" title="Anima's Thunder-Hoof">Anima's Thunder-Hoof</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast Avatar (5/5)</div>
@@ -1332,7 +1364,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Maelstrom Genesis</div>
+            <div class="card-name" title="Maelstrom Genesis">Maelstrom Genesis</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -1352,7 +1384,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Alara's Grimoire</div>
+            <div class="card-name" title="Alara's Grimoire">Alara's Grimoire</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -1372,7 +1404,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Conflux Archmage</div>
+            <div class="card-name" title="Conflux Archmage">Conflux Archmage</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Wizard (2/2)</div>
@@ -1392,7 +1424,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Maelstrom Pulse</div>
+            <div class="card-name" title="Maelstrom Pulse">Maelstrom Pulse</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -1412,7 +1444,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Fauna Shaman</div>
+            <div class="card-name" title="Fauna Shaman">Fauna Shaman</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Shaman (2/2)</div>
@@ -1432,7 +1464,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Behemoth's Maul</div>
+            <div class="card-name" title="Behemoth's Maul">Behemoth's Maul</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment</div>
@@ -1452,7 +1484,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Nullifier</div>
+            <div class="card-name" title="Etherium Nullifier">Etherium Nullifier</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Drone (2/1)</div>
@@ -1472,7 +1504,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Reanimate the Fallen</div>
+            <div class="card-name" title="Reanimate the Fallen">Reanimate the Fallen</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -1492,7 +1524,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Hollow Scourge</div>
+            <div class="card-name" title="Rot-Hollow Scourge">Rot-Hollow Scourge</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Horror (3/3)</div>
@@ -1512,7 +1544,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Volcanic Fallout</div>
+            <div class="card-name" title="Volcanic Fallout">Volcanic Fallout</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1532,7 +1564,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rage-Feast Hellion</div>
+            <div class="card-name" title="Rage-Feast Hellion">Rage-Feast Hellion</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Hellion (4/4)</div>
@@ -1552,7 +1584,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Behemoth's Roar</div>
+            <div class="card-name" title="Behemoth's Roar">Behemoth's Roar</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1572,7 +1604,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Life-Force Baloth</div>
+            <div class="card-name" title="Life-Force Baloth">Life-Force Baloth</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast (4/4)</div>
@@ -1592,7 +1624,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rhox Arbiter</div>
+            <div class="card-name" title="Rhox Arbiter">Rhox Arbiter</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rhox Soldier (3/3)</div>
@@ -1612,7 +1644,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Soul-Siphoner</div>
+            <div class="card-name" title="Etherium Soul-Siphoner">Etherium Soul-Siphoner</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Zombie Wizard (2/2)</div>
@@ -1632,7 +1664,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Viscera Dragger</div>
+            <div class="card-name" title="Viscera Dragger">Viscera Dragger</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Ogre Berserker (5/1)</div>
@@ -1652,7 +1684,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Thunder-Thrasher Baloth</div>
+            <div class="card-name" title="Thunder-Thrasher Baloth">Thunder-Thrasher Baloth</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast (4/4)</div>
@@ -1672,7 +1704,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Gargantua’s Herald</div>
+            <div class="card-name" title="Gargantua’s Herald">Gargantua’s Herald</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Shaman (2/3)</div>
@@ -1692,7 +1724,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Mobile Siege-Bastion</div>
+            <div class="card-name" title="Mobile Siege-Bastion">Mobile Siege-Bastion</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Vehicle (3/4)</div>
@@ -1712,7 +1744,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Architect</div>
+            <div class="card-name" title="Etherium Architect">Etherium Architect</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Artificer (2/2)</div>
@@ -1732,7 +1764,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Flux-Core Transmuter</div>
+            <div class="card-name" title="Flux-Core Transmuter">Flux-Core Transmuter</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Construct (2/3)</div>
@@ -1752,7 +1784,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Pridemage Duelist</div>
+            <div class="card-name" title="Pridemage Duelist">Pridemage Duelist</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Cat Knight (2/2)</div>
@@ -1772,7 +1804,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Farm Cultivator</div>
+            <div class="card-name" title="Rot-Farm Cultivator">Rot-Farm Cultivator</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Plant Zombie (1/3)</div>
@@ -1792,7 +1824,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigiled Charm</div>
+            <div class="card-name" title="Sigiled Charm">Sigiled Charm</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1812,7 +1844,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Charm</div>
+            <div class="card-name" title="Etherium Charm">Etherium Charm</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1832,7 +1864,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Necrotic Charm</div>
+            <div class="card-name" title="Necrotic Charm">Necrotic Charm</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1852,7 +1884,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Devouring Charm</div>
+            <div class="card-name" title="Devouring Charm">Devouring Charm</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1872,7 +1904,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Behemoth Charm</div>
+            <div class="card-name" title="Behemoth Charm">Behemoth Charm</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -1892,7 +1924,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Filigree Familiar</div>
+            <div class="card-name" title="Filigree Familiar">Filigree Familiar</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Fox (2/2)</div>
@@ -1912,7 +1944,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Corpse Connoisseur</div>
+            <div class="card-name" title="Corpse Connoisseur">Corpse Connoisseur</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Wizard (3/3)</div>
@@ -1932,7 +1964,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Fusion Elemental</div>
+            <div class="card-name" title="Fusion Elemental">Fusion Elemental</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elemental (8/8)</div>
@@ -1952,7 +1984,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sphinx's Steward</div>
+            <div class="card-name" title="Sphinx's Steward">Sphinx's Steward</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Vedalken Wizard (2/2)</div>
@@ -1972,7 +2004,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Storm-Kin Sorcerer</div>
+            <div class="card-name" title="Storm-Kin Sorcerer">Storm-Kin Sorcerer</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Wizard (2/1)</div>
@@ -1992,7 +2024,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Garden Shambler</div>
+            <div class="card-name" title="Rot-Garden Shambler">Rot-Garden Shambler</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Plant Zombie (3/3)</div>
@@ -2012,7 +2044,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Cerodon Charger</div>
+            <div class="card-name" title="Cerodon Charger">Cerodon Charger</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast (3/2)</div>
@@ -2032,7 +2064,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigiled Sky-Knight</div>
+            <div class="card-name" title="Sigiled Sky-Knight">Sigiled Sky-Knight</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Knight (2/2)</div>
@@ -2052,7 +2084,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Purge the Unnatural</div>
+            <div class="card-name" title="Purge the Unnatural">Purge the Unnatural</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2072,7 +2104,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Logic Snare</div>
+            <div class="card-name" title="Logic Snare">Logic Snare</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2092,7 +2124,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blood-Tithe Executioner</div>
+            <div class="card-name" title="Blood-Tithe Executioner">Blood-Tithe Executioner</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vampire Warrior (3/2)</div>
@@ -2112,7 +2144,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Maelstrom Geode</div>
+            <div class="card-name" title="Maelstrom Geode">Maelstrom Geode</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2132,7 +2164,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Conflux Prism</div>
+            <div class="card-name" title="Conflux Prism">Conflux Prism</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2152,7 +2184,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crimson Paladin</div>
+            <div class="card-name" title="Crimson Paladin">Crimson Paladin</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Aven Knight (3/3)</div>
@@ -2172,7 +2204,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Censor</div>
+            <div class="card-name" title="Blind Court Censor">Blind Court Censor</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Spirit Advisor (2/3)</div>
@@ -2192,7 +2224,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Sower</div>
+            <div class="card-name" title="Vitalist Sower">Vitalist Sower</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Druid Construct (2/4)</div>
@@ -2212,7 +2244,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Automaton</div>
+            <div class="card-name" title="Null-Keeper Automaton">Null-Keeper Automaton</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Golem (3/3)</div>
@@ -2232,7 +2264,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver Chaplain</div>
+            <div class="card-name" title="Absolver Chaplain">Absolver Chaplain</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Cleric (2/2)</div>
@@ -2252,7 +2284,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord Butcher</div>
+            <div class="card-name" title="Rot-Lord Butcher">Rot-Lord Butcher</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Demon Berserker (4/2)</div>
@@ -2272,7 +2304,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Engineer</div>
+            <div class="card-name" title="Stone-Shaper Engineer">Stone-Shaper Engineer</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Goblin Artificer (2/3)</div>
@@ -2292,7 +2324,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Hunter</div>
+            <div class="card-name" title="Apex Hunter">Apex Hunter</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Shaman (3/2)</div>
@@ -2312,7 +2344,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Leonin Infiltrator</div>
+            <div class="card-name" title="Leonin Infiltrator">Leonin Infiltrator</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Cat Scout (3/3)</div>
@@ -2332,7 +2364,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Anima's Thunderbolt</div>
+            <div class="card-name" title="Anima's Thunderbolt">Anima's Thunderbolt</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2352,7 +2384,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Slave of Bolas</div>
+            <div class="card-name" title="Slave of Bolas">Slave of Bolas</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-ur ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -2372,7 +2404,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Bituminous Blast</div>
+            <div class="card-name" title="Bituminous Blast">Bituminous Blast</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2392,7 +2424,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Bloodbraid Elf</div>
+            <div class="card-name" title="Bloodbraid Elf">Bloodbraid Elf</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Berserker (3/2)</div>
@@ -2412,7 +2444,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil's Glare</div>
+            <div class="card-name" title="Sigil's Glare">Sigil's Glare</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2432,7 +2464,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grixis Manipulation</div>
+            <div class="card-name" title="Grixis Manipulation">Grixis Manipulation</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2452,7 +2484,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Foundry of the Third Era</div>
+            <div class="card-name" title="Foundry of the Third Era">Foundry of the Third Era</div>
             <div class="card-cost"><i class="ms ms-wb ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2472,7 +2504,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Qasali Stalker</div>
+            <div class="card-name" title="Qasali Stalker">Qasali Stalker</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Cat Warrior (2/3)</div>
@@ -2492,7 +2524,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Fieldmist Borderpost</div>
+            <div class="card-name" title="Fieldmist Borderpost">Fieldmist Borderpost</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2512,7 +2544,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Mistvein Borderpost</div>
+            <div class="card-name" title="Mistvein Borderpost">Mistvein Borderpost</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2532,7 +2564,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Veinfire Borderpost</div>
+            <div class="card-name" title="Veinfire Borderpost">Veinfire Borderpost</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2552,7 +2584,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Firewild Borderpost</div>
+            <div class="card-name" title="Firewild Borderpost">Firewild Borderpost</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2572,7 +2604,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Wildfield Borderpost</div>
+            <div class="card-name" title="Wildfield Borderpost">Wildfield Borderpost</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2592,7 +2624,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil of the New Dawn</div>
+            <div class="card-name" title="Sigil of the New Dawn">Sigil of the New Dawn</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -2612,7 +2644,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Intimidation</div>
+            <div class="card-name" title="Rot-Lord's Intimidation">Rot-Lord's Intimidation</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -2632,7 +2664,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist's Bloom</div>
+            <div class="card-name" title="Vitalist's Bloom">Vitalist's Bloom</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -2652,7 +2684,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Dregscape Specter</div>
+            <div class="card-name" title="Dregscape Specter">Dregscape Specter</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Specter (2/1)</div>
@@ -2672,7 +2704,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Baloth of the Conflux</div>
+            <div class="card-name" title="Baloth of the Conflux">Baloth of the Conflux</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast (6/6)</div>
@@ -2692,7 +2724,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Logic-Knot</div>
+            <div class="card-name" title="Etherium Logic-Knot">Etherium Logic-Knot</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -2712,7 +2744,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rhox Duelist</div>
+            <div class="card-name" title="Rhox Duelist">Rhox Duelist</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rhox Soldier (2/2)</div>
@@ -2732,7 +2764,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grixis Grimblade</div>
+            <div class="card-name" title="Grixis Grimblade">Grixis Grimblade</div>
             <div class="card-cost"><i class="ms ms-br ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Warrior (2/1)</div>
@@ -2752,7 +2784,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Naya Swiftblade</div>
+            <div class="card-name" title="Naya Swiftblade">Naya Swiftblade</div>
             <div class="card-cost"><i class="ms ms-gw ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Rogue (2/2)</div>
@@ -2772,7 +2804,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Esper Stormblade</div>
+            <div class="card-name" title="Esper Stormblade">Esper Stormblade</div>
             <div class="card-cost"><i class="ms ms-wu ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Vedalken Soldier (1/1)</div>
@@ -2792,7 +2824,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Jund Flesh-Eater</div>
+            <div class="card-name" title="Jund Flesh-Eater">Jund Flesh-Eater</div>
             <div class="card-cost"><i class="ms ms-br ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Shaman (3/2)</div>
@@ -2812,7 +2844,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Bant Sureblade</div>
+            <div class="card-name" title="Bant Sureblade">Bant Sureblade</div>
             <div class="card-cost"><i class="ms ms-gu ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Soldier (2/1)</div>
@@ -2832,7 +2864,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Illusionary Servant</div>
+            <div class="card-name" title="Illusionary Servant">Illusionary Servant</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Illusion (4/4)</div>
@@ -2852,7 +2884,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ruin-Shard Gargoyle</div>
+            <div class="card-name" title="Ruin-Shard Gargoyle">Ruin-Shard Gargoyle</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Gargoyle (2/2)</div>
@@ -2872,7 +2904,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Obelisk of Alara</div>
+            <div class="card-name" title="Obelisk of Alara">Obelisk of Alara</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -2892,7 +2924,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Gargantuan</div>
+            <div class="card-name" title="Etherium Gargantuan">Etherium Gargantuan</div>
             <div class="card-cost"><i class="ms ms-5 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Beast (4/4)</div>
@@ -2912,7 +2944,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Carnage Horror</div>
+            <div class="card-name" title="Carnage Horror">Carnage Horror</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Horror (5/5)</div>
@@ -2932,7 +2964,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sphinx of the Spectrum</div>
+            <div class="card-name" title="Sphinx of the Spectrum">Sphinx of the Spectrum</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Sphinx (5/4)</div>
@@ -2952,7 +2984,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Lhurgoyf</div>
+            <div class="card-name" title="Rot-Lord's Lhurgoyf">Rot-Lord's Lhurgoyf</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Lhurgoyf (*)</div>
@@ -2972,7 +3004,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Titanic Griffin</div>
+            <div class="card-name" title="Titanic Griffin">Titanic Griffin</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Griffin (2/2)</div>
@@ -2992,7 +3024,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Purist Breaker</div>
+            <div class="card-name" title="Purist Breaker">Purist Breaker</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Soldier (3/2)</div>
@@ -3012,7 +3044,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Funeral of Minds</div>
+            <div class="card-name" title="Funeral of Minds">Funeral of Minds</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -3032,7 +3064,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rhox Sigil-Bearer</div>
+            <div class="card-name" title="Rhox Sigil-Bearer">Rhox Sigil-Bearer</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rhox Soldier (1/1)</div>
@@ -3052,7 +3084,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Ardent Aven</div>
+            <div class="card-name" title="Ardent Aven">Ardent Aven</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Bird Soldier (1/1)</div>
@@ -3072,7 +3104,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil of Submission</div>
+            <div class="card-name" title="Sigil of Submission">Sigil of Submission</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment — Aura</div>
@@ -3092,7 +3124,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blessed Armaments</div>
+            <div class="card-name" title="Blessed Armaments">Blessed Armaments</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3112,7 +3144,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Court Homunculus</div>
+            <div class="card-name" title="Court Homunculus">Court Homunculus</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Homunculus (1/1)</div>
@@ -3132,7 +3164,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Human Observer</div>
+            <div class="card-name" title="Human Observer">Human Observer</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Wizard (1/3)</div>
@@ -3152,7 +3184,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Spinner</div>
+            <div class="card-name" title="Etherium Spinner">Etherium Spinner</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Vedalken Wizard (2/1)</div>
@@ -3172,7 +3204,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Skywhale</div>
+            <div class="card-name" title="Etherium Skywhale">Etherium Skywhale</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Whale (3/4)</div>
@@ -3192,7 +3224,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vedalken Looter</div>
+            <div class="card-name" title="Vedalken Looter">Vedalken Looter</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Wizard (1/2)</div>
@@ -3212,7 +3244,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Aether Tow</div>
+            <div class="card-name" title="Aether Tow">Aether Tow</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3232,7 +3264,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rotting Rats</div>
+            <div class="card-name" title="Rotting Rats">Rotting Rats</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rat (1/1)</div>
@@ -3252,7 +3284,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blighted Carrier</div>
+            <div class="card-name" title="Blighted Carrier">Blighted Carrier</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Beast (2/1)</div>
@@ -3272,7 +3304,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Dregscape Zombie</div>
+            <div class="card-name" title="Dregscape Zombie">Dregscape Zombie</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie (2/1)</div>
@@ -3292,7 +3324,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vis-Caste Sorcerer</div>
+            <div class="card-name" title="Vis-Caste Sorcerer">Vis-Caste Sorcerer</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Wizard (1/2)</div>
@@ -3312,7 +3344,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Feed the Maelstrom</div>
+            <div class="card-name" title="Feed the Maelstrom">Feed the Maelstrom</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3332,7 +3364,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grave Pact Ritual</div>
+            <div class="card-name" title="Grave Pact Ritual">Grave Pact Ritual</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3352,7 +3384,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Magma Burst</div>
+            <div class="card-name" title="Magma Burst">Magma Burst</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3372,7 +3404,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Violent Outburst</div>
+            <div class="card-name" title="Violent Outburst">Violent Outburst</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3392,7 +3424,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Furious Strike</div>
+            <div class="card-name" title="Furious Strike">Furious Strike</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -3412,7 +3444,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Goblin War-Driver</div>
+            <div class="card-name" title="Goblin War-Driver">Goblin War-Driver</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Goblin Warrior (2/1)</div>
@@ -3432,7 +3464,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Viashino Firebrand</div>
+            <div class="card-name" title="Viashino Firebrand">Viashino Firebrand</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Warrior (2/1)</div>
@@ -3452,7 +3484,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Nacatl Surveyor</div>
+            <div class="card-name" title="Nacatl Surveyor">Nacatl Surveyor</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Cat Scout (2/1)</div>
@@ -3472,7 +3504,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Savage Hunt</div>
+            <div class="card-name" title="Savage Hunt">Savage Hunt</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -3492,7 +3524,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Human Soil-Tiller</div>
+            <div class="card-name" title="Human Soil-Tiller">Human Soil-Tiller</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Druid (1/2)</div>
@@ -3512,7 +3544,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Wild Leotau</div>
+            <div class="card-name" title="Wild Leotau">Wild Leotau</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Cat (3/2)</div>
@@ -3532,7 +3564,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Cylian Giant</div>
+            <div class="card-name" title="Cylian Giant">Cylian Giant</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Warrior (2/4)</div>
@@ -3552,7 +3584,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Canopy Stalker</div>
+            <div class="card-name" title="Canopy Stalker">Canopy Stalker</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Spider (2/4)</div>
@@ -3572,7 +3604,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil of Shielding</div>
+            <div class="card-name" title="Sigil of Shielding">Sigil of Shielding</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment — Aura</div>
@@ -3592,7 +3624,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Filigree Courier</div>
+            <div class="card-name" title="Filigree Courier">Filigree Courier</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-wu ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Bird Scout (1/1)</div>
@@ -3612,7 +3644,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Kathari Infiltrator</div>
+            <div class="card-name" title="Kathari Infiltrator">Kathari Infiltrator</div>
             <div class="card-cost"><i class="ms ms-ub ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Bird Rogue (1/1)</div>
@@ -3632,7 +3664,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Viashino Hackblade</div>
+            <div class="card-name" title="Viashino Hackblade">Viashino Hackblade</div>
             <div class="card-cost"><i class="ms ms-br ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Berserker (2/1)</div>
@@ -3652,7 +3684,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Naya Brawler</div>
+            <div class="card-name" title="Naya Brawler">Naya Brawler</div>
             <div class="card-cost"><i class="ms ms-rg ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Warrior (2/1)</div>
@@ -3672,7 +3704,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Clan Executioner</div>
+            <div class="card-name" title="Rot-Clan Executioner">Rot-Clan Executioner</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3692,7 +3724,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blade of the Order</div>
+            <div class="card-name" title="Blade of the Order">Blade of the Order</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment (Bant)</div>
@@ -3712,7 +3744,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Mask of the Artificer</div>
+            <div class="card-name" title="Mask of the Artificer">Mask of the Artificer</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment (Esper)</div>
@@ -3732,7 +3764,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Scythe of the Necropolis</div>
+            <div class="card-name" title="Scythe of the Necropolis">Scythe of the Necropolis</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment (Grixis)</div>
@@ -3752,7 +3784,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Claws of the Devourer</div>
+            <div class="card-name" title="Claws of the Devourer">Claws of the Devourer</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment (Jund)</div>
@@ -3772,7 +3804,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Hammer of the Behemoth</div>
+            <div class="card-name" title="Hammer of the Behemoth">Hammer of the Behemoth</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment (Naya)</div>
@@ -3792,7 +3824,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Prism-Glass Amulet</div>
+            <div class="card-name" title="Prism-Glass Amulet">Prism-Glass Amulet</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -3812,7 +3844,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Evolving Wilds</div>
+            <div class="card-name" title="Evolving Wilds">Evolving Wilds</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -3832,7 +3864,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rupture Spire</div>
+            <div class="card-name" title="Rupture Spire">Rupture Spire</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -3852,7 +3884,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Maelstrom Edge</div>
+            <div class="card-name" title="Maelstrom Edge">Maelstrom Edge</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -3872,7 +3904,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crystal Grotto</div>
+            <div class="card-name" title="Crystal Grotto">Crystal Grotto</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -3892,7 +3924,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Dawn-Ray Archer</div>
+            <div class="card-name" title="Dawn-Ray Archer">Dawn-Ray Archer</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Archer (1/2)</div>
@@ -3912,7 +3944,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Shield-Wall Sentinel</div>
+            <div class="card-name" title="Shield-Wall Sentinel">Shield-Wall Sentinel</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Soldier (0/4)</div>
@@ -3932,7 +3964,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Strategic Planning</div>
+            <div class="card-name" title="Strategic Planning">Strategic Planning</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -3952,7 +3984,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Dream Fracture</div>
+            <div class="card-name" title="Dream Fracture">Dream Fracture</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -3972,7 +4004,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Dredge the Ruins</div>
+            <div class="card-name" title="Dredge the Ruins">Dredge the Ruins</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -3992,7 +4024,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Flesh-Twist Plague</div>
+            <div class="card-name" title="Flesh-Twist Plague">Flesh-Twist Plague</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4012,7 +4044,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Spark-Rage Berserker</div>
+            <div class="card-name" title="Spark-Rage Berserker">Spark-Rage Berserker</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Berserker (2/1)</div>
@@ -4032,7 +4064,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crashing Rockslide</div>
+            <div class="card-name" title="Crashing Rockslide">Crashing Rockslide</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4052,7 +4084,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vines of the Conflux</div>
+            <div class="card-name" title="Vines of the Conflux">Vines of the Conflux</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -4072,7 +4104,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Moss-Covered Hulk</div>
+            <div class="card-name" title="Moss-Covered Hulk">Moss-Covered Hulk</div>
             <div class="card-cost"><i class="ms ms-4 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Beast (5/5)</div>
@@ -4092,7 +4124,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Bant Panorama</div>
+            <div class="card-name" title="Bant Panorama">Bant Panorama</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -4112,7 +4144,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Esper Panorama</div>
+            <div class="card-name" title="Esper Panorama">Esper Panorama</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -4132,7 +4164,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grixis Panorama</div>
+            <div class="card-name" title="Grixis Panorama">Grixis Panorama</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -4152,7 +4184,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Jund Panorama</div>
+            <div class="card-name" title="Jund Panorama">Jund Panorama</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -4172,7 +4204,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Naya Panorama</div>
+            <div class="card-name" title="Naya Panorama">Naya Panorama</div>
             <div class="card-cost"></div>
           </div>
           <div class="card-type-line">Land</div>
@@ -4192,7 +4224,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crimson Sigil Recruit</div>
+            <div class="card-name" title="Crimson Sigil Recruit">Crimson Sigil Recruit</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Leonin Soldier (2/1)</div>
@@ -4212,7 +4244,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Enforcer</div>
+            <div class="card-name" title="Blind Court Enforcer">Blind Court Enforcer</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Wizard (1/4)</div>
@@ -4232,7 +4264,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Sprout-Bot</div>
+            <div class="card-name" title="Vitalist Sprout-Bot">Vitalist Sprout-Bot</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Construct (1/1)</div>
@@ -4252,7 +4284,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Sentry</div>
+            <div class="card-name" title="Null-Keeper Sentry">Null-Keeper Sentry</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Golem (2/4)</div>
@@ -4272,7 +4304,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver Initiate</div>
+            <div class="card-name" title="Absolver Initiate">Absolver Initiate</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Skeleton Cleric (1/2)</div>
@@ -4292,7 +4324,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord Scavenger</div>
+            <div class="card-name" title="Rot-Lord Scavenger">Rot-Lord Scavenger</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Rogue (2/2)</div>
@@ -4312,7 +4344,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Apprentice</div>
+            <div class="card-name" title="Stone-Shaper Apprentice">Stone-Shaper Apprentice</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Artificer (1/1)</div>
@@ -4332,7 +4364,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Stalker</div>
+            <div class="card-name" title="Apex Stalker">Apex Stalker</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Warrior (3/3)</div>
@@ -4352,7 +4384,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Guardian</div>
+            <div class="card-name" title="Steel-Leaf Guardian">Steel-Leaf Guardian</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Elf Warrior (2/2)</div>
@@ -4372,7 +4404,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Anima's Vandal</div>
+            <div class="card-name" title="Anima's Vandal">Anima's Vandal</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Shaman (3/2)</div>
@@ -4392,7 +4424,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Esper Logic-Ward</div>
+            <div class="card-name" title="Esper Logic-Ward">Esper Logic-Ward</div>
             <div class="card-cost"><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4412,7 +4444,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Naya Might</div>
+            <div class="card-name" title="Naya Might">Naya Might</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4432,7 +4464,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Grixis Rot-Call</div>
+            <div class="card-name" title="Grixis Rot-Call">Grixis Rot-Call</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -4452,7 +4484,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Bant Peacekeeper</div>
+            <div class="card-name" title="Bant Peacekeeper">Bant Peacekeeper</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Rhox Soldier (2/2)</div>
@@ -4472,7 +4504,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Jund Battle-Cry</div>
+            <div class="card-name" title="Jund Battle-Cry">Jund Battle-Cry</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4492,7 +4524,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Volley</div>
+            <div class="card-name" title="Stone-Shaper Volley">Stone-Shaper Volley</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4512,7 +4544,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Etherium Shield</div>
+            <div class="card-name" title="Etherium Shield">Etherium Shield</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4532,7 +4564,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Sigil of Bravery</div>
+            <div class="card-name" title="Sigil of Bravery">Sigil of Bravery</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment — Aura</div>
@@ -4552,7 +4584,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Hollow Infestation</div>
+            <div class="card-name" title="Rot-Hollow Infestation">Rot-Hollow Infestation</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Insect Horror (2/2)</div>
@@ -4572,7 +4604,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Fling</div>
+            <div class="card-name" title="Fling">Fling</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4592,7 +4624,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Archer</div>
+            <div class="card-name" title="Steel-Leaf Archer">Steel-Leaf Archer</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Archer (1/2)</div>
@@ -4612,7 +4644,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Repair-Bot</div>
+            <div class="card-name" title="Vitalist Repair-Bot">Vitalist Repair-Bot</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Construct (1/3)</div>
@@ -4632,7 +4664,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Reject</div>
+            <div class="card-name" title="Null-Keeper Reject">Null-Keeper Reject</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Homunculus (0/5)</div>
@@ -4652,7 +4684,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver's Blessing</div>
+            <div class="card-name" title="Absolver's Blessing">Absolver's Blessing</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4672,7 +4704,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Greed</div>
+            <div class="card-name" title="Rot-Lord's Greed">Rot-Lord's Greed</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -4692,7 +4724,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Grunt</div>
+            <div class="card-name" title="Stone-Shaper Grunt">Stone-Shaper Grunt</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Goblin Warrior (2/1)</div>
@@ -4712,7 +4744,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Survivalist</div>
+            <div class="card-name" title="Apex Survivalist">Apex Survivalist</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Viashino Scout (2/1)</div>
@@ -4732,7 +4764,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Might</div>
+            <div class="card-name" title="Steel-Leaf Might">Steel-Leaf Might</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4752,7 +4784,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Anima's Smasher</div>
+            <div class="card-name" title="Anima's Smasher">Anima's Smasher</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Berserker (3/2)</div>
@@ -4772,7 +4804,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Crimson Sigil Squire</div>
+            <div class="card-name" title="Crimson Sigil Squire">Crimson Sigil Squire</div>
             <div class="card-cost"><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Human Soldier (1/1)</div>
@@ -4792,7 +4824,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Scribe</div>
+            <div class="card-name" title="Blind Court Scribe">Blind Court Scribe</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Vedalken Wizard (1/3)</div>
@@ -4812,7 +4844,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Gardener</div>
+            <div class="card-name" title="Vitalist Gardener">Vitalist Gardener</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Elf Druid (0/2)</div>
@@ -4832,7 +4864,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Ward</div>
+            <div class="card-name" title="Null-Keeper Ward">Null-Keeper Ward</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -4852,7 +4884,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Absolver's Duty</div>
+            <div class="card-name" title="Absolver's Duty">Absolver's Duty</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-w ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment</div>
@@ -4872,7 +4904,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Rot-Lord's Pet</div>
+            <div class="card-name" title="Rot-Lord's Pet">Rot-Lord's Pet</div>
             <div class="card-cost"><i class="ms ms-b ms-cost"></i></div>
           </div>
           <div class="card-type-line">Creature — Zombie Rat (1/1)</div>
@@ -4892,7 +4924,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Stone-Shaper Tactics</div>
+            <div class="card-name" title="Stone-Shaper Tactics">Stone-Shaper Tactics</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4912,7 +4944,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Apex Hunt</div>
+            <div class="card-name" title="Apex Hunt">Apex Hunt</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Sorcery</div>
@@ -4932,7 +4964,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Steel-Leaf Harness</div>
+            <div class="card-name" title="Steel-Leaf Harness">Steel-Leaf Harness</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact — Equipment</div>
@@ -4952,7 +4984,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Anima's Warning</div>
+            <div class="card-name" title="Anima's Warning">Anima's Warning</div>
             <div class="card-cost"><i class="ms ms-r ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -4972,7 +5004,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Banner of the Crimson Sigil</div>
+            <div class="card-name" title="Banner of the Crimson Sigil">Banner of the Crimson Sigil</div>
             <div class="card-cost"><i class="ms ms-2 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact</div>
@@ -4992,7 +5024,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Blind Court Lock</div>
+            <div class="card-name" title="Blind Court Lock">Blind Court Lock</div>
             <div class="card-cost"><i class="ms ms-1 ms-cost"></i><i class="ms ms-u ms-cost"></i></div>
           </div>
           <div class="card-type-line">Enchantment — Aura</div>
@@ -5012,7 +5044,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Vitalist Growth</div>
+            <div class="card-name" title="Vitalist Growth">Vitalist Growth</div>
             <div class="card-cost"><i class="ms ms-g ms-cost"></i></div>
           </div>
           <div class="card-type-line">Instant</div>
@@ -5032,7 +5064,7 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            <div class="card-name">Null-Keeper Gargoyle</div>
+            <div class="card-name" title="Null-Keeper Gargoyle">Null-Keeper Gargoyle</div>
             <div class="card-cost"><i class="ms ms-3 ms-cost"></i></div>
           </div>
           <div class="card-type-line">Artifact Creature — Gargoyle (2/3)</div>
